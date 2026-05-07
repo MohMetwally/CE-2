@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -110,7 +111,7 @@ nav a{
   font-size:80px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
   width:92%;
@@ -145,7 +146,7 @@ h2{
   cursor:pointer;
 }
 
-/* LESSON SHOW / HIDE */
+/* HIDDEN */
 
 .lesson-hidden{
   display:none;
@@ -315,6 +316,39 @@ td{
   text-decoration:none;
 }
 
+/* QUIZ */
+
+.quiz-question{
+  background:#fffefa;
+  border:2px dashed #9bc3ff;
+  border-radius:16px;
+  padding:15px;
+  margin:15px 0;
+}
+
+.quiz-question p{
+  font-size:26px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.quiz-question label{
+  display:block;
+  margin:8px 0;
+  cursor:pointer;
+}
+
+.result-box{
+  margin-top:20px;
+  padding:20px;
+  border-radius:18px;
+  background:#eef6ff;
+  border:3px solid #08265c;
+  font-size:30px;
+  font-weight:bold;
+  display:none;
+}
+
 /* FOOTER */
 
 footer{
@@ -354,77 +388,96 @@ table{
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <div class="logo">
-    <h1>📖 Mr. Metwally</h1>
-    <p>English Teacher</p>
-  </div>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#level2">Level 2</a>
-    <a href="#handouts">Handouts</a>
-    <a href="#videos">Videos</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<div class="logo">
+  <h1>📖 Mr. Metwally</h1>
+  <p>English Teacher</p>
+</div>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#level2">Level 2</a>
+  <a href="#handouts">Handouts</a>
+  <a href="#videos">Videos</a>
+  <a href="#resources">Resources</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 </header>
 
 <!-- HERO -->
 
 <div class="hero">
 
-  <div class="hero-top">
+<div class="hero-top">
 
-    <div class="illustration">🌍📚</div>
+<div class="illustration">🌍📚</div>
 
-    <div>
-      <h2>LEARN ENGLISH</h2>
+<div>
 
-      <div class="tagline">
-        Speak Confidently. Learn Creatively. Succeed Globally.
-      </div>
+<h2>LEARN ENGLISH</h2>
 
-      <p class="hero-note">
-        Interactive lessons • Videos • Handouts • Real English
-      </p>
-    </div>
+<div class="tagline">
+Speak Confidently. Learn Creatively. Succeed Globally.
+</div>
 
-    <div class="illustration">🎓✨</div>
+<p class="hero-note">
+Interactive lessons • Videos • Handouts • Real English
+</p>
 
-  </div>
+</div>
+
+<div class="illustration">🎓✨</div>
+
+</div>
 
 </div>
 
 <!-- ABOUT -->
 
 <section id="about">
-  <h2>About</h2>
-  <p>
-    Welcome to my English learning website.
-    Here students can access lessons, handouts,
-    videos, classroom activities and learning resources organised by level and skill.
-  </p>
+
+<h2>About</h2>
+
+<p>
+Welcome to my English learning website.
+Here students can access lessons, handouts,
+videos, classroom activities and learning resources organised by level and skill.
+</p>
+
 </section>
 
 <!-- LEVEL 2 -->
 
 <section id="level2">
-  <h2>Level 2</h2>
 
-  <button class="btn" onclick="toggleLesson('present-simple')">
-    ✏️ Grammar: Present Simple
-  </button>
+<h2>Level 2</h2>
 
-  <a class="btn" href="#" style="background:#14a085;">📘 Reading</a>
-  <a class="btn" href="#" style="background:#ff7a1a;">🎧 Listening</a>
+<button class="btn" onclick="toggleLesson('present-simple')">
+✏️ Grammar: Present Simple
+</button>
+
+<button class="btn" onclick="toggleLesson('present-simple-test')" style="background:#d62828;">
+📝 Present Simple Test
+</button>
+
+<a class="btn" href="#" style="background:#14a085;">
+📘 Reading
+</a>
+
+<a class="btn" href="#" style="background:#ff7a1a;">
+🎧 Listening
+</a>
+
 </section>
 
-<!-- PRESENT SIMPLE LESSON -->
+<!-- PRESENT SIMPLE -->
 
 <section id="present-simple" class="lesson-hidden">
 
@@ -435,6 +488,7 @@ Truths, habits, routines, facts and fixed situations
 </div>
 
 <details open>
+
 <summary>1. WHAT IS IT?</summary>
 
 <p>
@@ -443,170 +497,148 @@ true or always happen.
 </p>
 
 <div class="mini-icons">
-  <div class="mini-box"><span>📅</span>every day</div>
-  <div class="mini-box"><span>🕒</span>usually</div>
-  <div class="mini-box"><span>🔁</span>often</div>
-  <div class="mini-box"><span>📌</span>on Mondays</div>
-  <div class="mini-box"><span>❌</span>never</div>
+
+<div class="mini-box"><span>📅</span>every day</div>
+<div class="mini-box"><span>🕒</span>usually</div>
+<div class="mini-box"><span>🔁</span>often</div>
+<div class="mini-box"><span>📌</span>on Mondays</div>
+<div class="mini-box"><span>❌</span>never</div>
+
 </div>
+
 </details>
 
 <details open class="green">
+
 <summary>2. USES</summary>
 
 <div class="cards">
 
-  <div class="card">
-    <div class="icon-big">🪥</div>
-    <h3>Habits</h3>
-    <p>every morning</p>
-  </div>
+<div class="card">
+<div class="icon-big">🪥</div>
+<h3>Habits</h3>
+<p>every morning</p>
+</div>
 
-  <div class="card">
-    <div class="icon-big">🌍</div>
-    <h3>Truths</h3>
-    <p>100°C</p>
-  </div>
+<div class="card">
+<div class="icon-big">🌍</div>
+<h3>Truths</h3>
+<p>100°C</p>
+</div>
 
-  <div class="card">
-    <div class="icon-big">📖</div>
-    <h3>Facts</h3>
-    <p>tropical countries</p>
-  </div>
+<div class="card">
+<div class="icon-big">📖</div>
+<h3>Facts</h3>
+<p>tropical countries</p>
+</div>
 
-  <div class="card">
-    <div class="icon-big">🚌</div>
-    <h3>Schedules</h3>
-    <p>8 o’clock</p>
-  </div>
+<div class="card">
+<div class="icon-big">🚌</div>
+<h3>Schedules</h3>
+<p>8 o’clock</p>
+</div>
 
-  <div class="card">
-    <div class="icon-big">❤️</div>
-    <h3>Feelings</h3>
-    <p>I love chocolate</p>
-  </div>
+<div class="card">
+<div class="icon-big">❤️</div>
+<h3>Feelings</h3>
+<p>I love chocolate</p>
+</div>
 
 </div>
-</details>
-
-<details open class="purple">
-<summary>3. FORM</summary>
-
-<table>
-<tr>
-<th>Subject</th>
-<th>Affirmative</th>
-<th>Negative</th>
-<th>Question</th>
-</tr>
-
-<tr>
-<td>I / You / We / They</td>
-<td>I play.</td>
-<td>I don’t play.</td>
-<td>Do I play?</td>
-</tr>
-
-<tr>
-<td>He / She / It</td>
-<td>He plays.</td>
-<td>He doesn’t play.</td>
-<td>Does he play?</td>
-</tr>
-</table>
-</details>
-
-<details open class="orange">
-<summary>4. SPELLING RULES</summary>
-
-<div class="spelling-grid">
-  <div class="rule-card"><div class="emoji">⚽</div>play → plays</div>
-  <div class="rule-card"><div class="emoji">📺</div>watch → watches</div>
-  <div class="rule-card"><div class="emoji">📚</div>study → studies</div>
-  <div class="rule-card"><div class="emoji">😊</div>enjoy → enjoys</div>
-</div>
-</details>
-
-<details open class="teal">
-<summary>5. ADVERBS OF FREQUENCY</summary>
-
-<div class="frequency-row"><div class="percent">100%</div><div class="bar always">always</div></div>
-<div class="frequency-row"><div class="percent">80%</div><div class="bar usually">usually</div></div>
-<div class="frequency-row"><div class="percent">60%</div><div class="bar often">often</div></div>
-<div class="frequency-row"><div class="percent">40%</div><div class="bar sometimes">sometimes</div></div>
-<div class="frequency-row"><div class="percent">20%</div><div class="bar rarely">rarely</div></div>
-<div class="frequency-row"><div class="percent">0%</div><div class="bar never">never</div></div>
 
 </details>
 
-<details open>
-<summary>6. TIME EXPRESSIONS</summary>
+</section>
 
-<div class="mini-icons">
-  <div class="mini-box"><span>📅</span>every day</div>
-  <div class="mini-box"><span>🕒</span>once a week</div>
-  <div class="mini-box"><span>🌞</span>morning</div>
-  <div class="mini-box"><span>🌙</span>night</div>
-  <div class="mini-box"><span>📌</span>Mondays</div>
-</div>
-</details>
+<!-- TEST -->
 
-<details open class="red">
-<summary>7. COMMON MISTAKES</summary>
+<section id="present-simple-test" class="lesson-hidden">
 
-<ul>
-<li>❌ He go to school. → ✅ He goes to school.</li>
-<li>❌ She don’t like coffee. → ✅ She doesn’t like coffee.</li>
-<li>❌ Do they goes? → ✅ Do they go?</li>
-</ul>
-</details>
+<h2>📝 Present Simple Test</h2>
+
+<p>
+Choose the correct answer, then click Submit.
+</p>
+
+<form id="quizForm">
+
+<div id="quiz"></div>
+
+<button type="button" class="btn" onclick="checkQuiz()">
+Submit
+</button>
+
+<button type="button" class="btn" onclick="resetQuiz()" style="background:#7b3fb5;">
+Reset
+</button>
+
+</form>
+
+<div id="result" class="result-box"></div>
 
 </section>
 
 <!-- HANDOUTS -->
 
 <section id="handouts">
-  <h2>Handouts</h2>
-  <div class="file-box">
-    <strong>📄 Grammar Worksheet</strong>
-    <a class="file-btn" href="#">Download</a>
-  </div>
+
+<h2>Handouts</h2>
+
+<div class="file-box">
+<strong>📄 Grammar Worksheet</strong>
+<a class="file-btn" href="#">Download</a>
+</div>
+
 </section>
 
 <!-- VIDEOS -->
 
 <section id="videos">
-  <h2>Videos</h2>
-  <div class="file-box">
-    <strong>▶️ Present Simple</strong>
-    <a class="file-btn" href="#" style="background:#7b4ce0;">Watch</a>
-  </div>
+
+<h2>Videos</h2>
+
+<div class="file-box">
+<strong>▶️ Present Simple</strong>
+<a class="file-btn" href="#" style="background:#7b4ce0;">Watch</a>
+</div>
+
 </section>
 
 <!-- RESOURCES -->
 
 <section id="resources">
-  <h2>Resources</h2>
-  <div class="file-box">
-    <strong>🎨 Infographics</strong>
-    <a class="file-btn" href="#">Open</a>
-  </div>
+
+<h2>Resources</h2>
+
+<div class="file-box">
+<strong>🎨 Infographics</strong>
+<a class="file-btn" href="#">Open</a>
+</div>
+
 </section>
 
 <!-- CONTACT -->
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: your-email@example.com</p>
+
+<h2>Contact</h2>
+
+<p>Email: your-email@example.com</p>
+
 </section>
 
 <footer>
-  <p>© 2026 Mr. Metwally | English Teacher Website</p>
+
+<p>
+© 2026 Mr. Metwally | English Teacher Website
+</p>
+
 </footer>
 
 <script>
 
 function toggleLesson(id){
+
   const lesson = document.getElementById(id);
 
   if(lesson.style.display === "block"){
@@ -614,7 +646,89 @@ function toggleLesson(id){
   } else {
     lesson.style.display = "block";
   }
+
 }
+
+const questions = [
+
+["Ahmed ______ to school every day.", ["go", "goes", "going"], "goes"],
+
+["We ______ football on Fridays.", ["plays", "play", "playing"], "play"],
+
+["She ______ coffee every morning.", ["drink", "drinks", "drinking"], "drinks"],
+
+["Water ______ at 100°C.", ["boil", "boils", "boiling"], "boils"],
+
+["The bus ______ at 7:00 a.m.", ["leave", "leaves", "leaving"], "leaves"]
+
+];
+
+function loadQuiz(){
+
+  let quiz = document.getElementById("quiz");
+
+  quiz.innerHTML = "";
+
+  questions.forEach((q, index) => {
+
+    let questionHTML = `
+      <div class="quiz-question">
+      <p>${index + 1}. ${q[0]}</p>
+    `;
+
+    q[1].forEach(option => {
+
+      questionHTML += `
+      <label>
+      <input type="radio" name="q${index}" value="${option}">
+      ${option}
+      </label>
+      `;
+
+    });
+
+    questionHTML += `</div>`;
+
+    quiz.innerHTML += questionHTML;
+
+  });
+
+}
+
+function checkQuiz(){
+
+  let score = 0;
+
+  questions.forEach((q, index) => {
+
+    let answer = document.querySelector(
+      `input[name="q${index}"]:checked`
+    );
+
+    if(answer && answer.value === q[2]){
+      score++;
+    }
+
+  });
+
+  let result = document.getElementById("result");
+
+  result.style.display = "block";
+
+  result.innerHTML =
+  `Your score: ${score} / ${questions.length}`;
+
+}
+
+function resetQuiz(){
+
+  document.getElementById("quizForm").reset();
+
+  document.getElementById("result").style.display = "none";
+
+}
+
+loadQuiz();
 
 </script>
 
