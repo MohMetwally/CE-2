@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Mr. Metwally | English Teacher</title>
 
@@ -21,16 +22,18 @@
       color:#1f2a44;
     }
 
+    /* Header */
+
     header{
       background:white;
       padding:15px 7%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      box-shadow:0 3px 15px rgba(0,0,0,0.08);
       position:sticky;
       top:0;
       z-index:1000;
+      box-shadow:0 3px 15px rgba(0,0,0,0.08);
     }
 
     .logo h2{
@@ -46,15 +49,15 @@
 
     nav{
       display:flex;
-      align-items:center;
       gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
     }
 
     nav a{
       text-decoration:none;
       color:#1f2a44;
       font-weight:bold;
-      transition:0.3s;
     }
 
     nav a:hover{
@@ -66,23 +69,25 @@
     .dropdown{
       position:relative;
       display:inline-block;
+      margin:10px;
     }
 
     .dropdown-content{
       display:none;
       position:absolute;
       background:white;
-      min-width:180px;
+      min-width:220px;
       border-radius:14px;
       overflow:hidden;
       box-shadow:0 8px 25px rgba(0,0,0,0.15);
-      top:35px;
+      z-index:100;
     }
 
     .dropdown-content a{
       display:block;
       padding:14px;
       color:#1f2a44;
+      text-decoration:none;
     }
 
     .dropdown-content a:hover{
@@ -127,6 +132,8 @@
       font-size:110px;
     }
 
+    /* Buttons */
+
     .btn{
       display:inline-block;
       margin-top:15px;
@@ -136,13 +143,13 @@
       border-radius:30px;
       text-decoration:none;
       font-weight:bold;
-      transition:0.3s;
     }
 
     .btn:hover{
-      transform:translateY(-4px);
       opacity:0.9;
     }
+
+    /* Sections */
 
     section{
       width:90%;
@@ -156,46 +163,6 @@
     h2{
       color:#006b5f;
       font-size:32px;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      gap:25px;
-    }
-
-    .card{
-      background:white;
-      border-radius:20px;
-      padding:30px;
-      text-align:center;
-      box-shadow:0 5px 18px rgba(0,0,0,0.1);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-8px);
-    }
-
-    .icon{
-      font-size:45px;
-      margin-bottom:10px;
-    }
-
-    .blue{
-      color:#2b7cff;
-    }
-
-    .green{
-      color:#14a085;
-    }
-
-    .orange{
-      color:#ff7a1a;
-    }
-
-    .purple{
-      color:#7b4ce0;
     }
 
     /* Files */
@@ -246,9 +213,8 @@
       }
 
       nav{
-        margin-top:15px;
-        flex-wrap:wrap;
         justify-content:center;
+        margin-top:15px;
       }
 
       .hero{
@@ -286,8 +252,6 @@
     <nav>
 
       <a href="#about">About</a>
-
-      <!-- Levels Dropdown -->
 
       <div class="dropdown">
 
@@ -361,36 +325,86 @@
 
     <h2>Level 2</h2>
 
-    <div class="cards">
+    <div class="dropdown">
 
-      <div class="card">
-        <div class="icon blue">📘</div>
-        <h3>Reading</h3>
+      <a class="btn" href="#">
+        📘 Reading ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Unit 1</a>
+        <a href="#">Unit 2</a>
+        <a href="#">Unit 3</a>
       </div>
 
-      <div class="card">
-        <div class="icon green">✏️</div>
-        <h3>Grammar</h3>
+    </div>
+
+    <div class="dropdown">
+
+      <a class="btn" href="#" style="background:#14a085;">
+        ✏️ Grammar ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Present Simple</a>
+        <a href="#">Past Simple</a>
+        <a href="#">Present Perfect</a>
       </div>
 
-      <div class="card">
-        <div class="icon orange">📝</div>
-        <h3>Vocabulary</h3>
+    </div>
+
+    <div class="dropdown">
+
+      <a class="btn" href="#" style="background:#ff7a1a;">
+        📝 Vocabulary ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Word Lists</a>
+        <a href="#">Practice</a>
+        <a href="#">Activities</a>
       </div>
 
-      <div class="card">
-        <div class="icon purple">🎧</div>
-        <h3>Listening</h3>
+    </div>
+
+    <div class="dropdown">
+
+      <a class="btn" href="#" style="background:#7b4ce0;">
+        🎧 Listening ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Audio 1</a>
+        <a href="#">Audio 2</a>
+        <a href="#">Audio 3</a>
       </div>
 
-      <div class="card">
-        <div class="icon blue">🗣️</div>
-        <h3>Speaking</h3>
+    </div>
+
+    <div class="dropdown">
+
+      <a class="btn" href="#" style="background:#2b7cff;">
+        🗣️ Speaking ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Speaking Cards</a>
+        <a href="#">Questions</a>
+        <a href="#">Activities</a>
       </div>
 
-      <div class="card">
-        <div class="icon green">📄</div>
-        <h3>Writing</h3>
+    </div>
+
+    <div class="dropdown">
+
+      <a class="btn" href="#" style="background:#009688;">
+        📄 Writing ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Paragraph Writing</a>
+        <a href="#">Emails</a>
+        <a href="#">Tasks</a>
       </div>
 
     </div>
@@ -403,36 +417,44 @@
 
     <h2>Level 3</h2>
 
-    <div class="cards">
+    <div class="dropdown">
 
-      <div class="card">
-        <div class="icon blue">📘</div>
-        <h3>Reading</h3>
+      <a class="btn" href="#">
+        📘 Reading ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Unit 1</a>
+        <a href="#">Unit 2</a>
+        <a href="#">Unit 3</a>
       </div>
 
-      <div class="card">
-        <div class="icon green">✏️</div>
-        <h3>Grammar</h3>
+    </div>
+
+    <div class="dropdown">
+
+      <a class="btn" href="#" style="background:#14a085;">
+        ✏️ Grammar ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Grammar 1</a>
+        <a href="#">Grammar 2</a>
+        <a href="#">Grammar 3</a>
       </div>
 
-      <div class="card">
-        <div class="icon orange">📝</div>
-        <h3>Vocabulary</h3>
-      </div>
+    </div>
 
-      <div class="card">
-        <div class="icon purple">🎧</div>
-        <h3>Listening</h3>
-      </div>
+    <div class="dropdown">
 
-      <div class="card">
-        <div class="icon blue">🗣️</div>
-        <h3>Speaking</h3>
-      </div>
+      <a class="btn" href="#" style="background:#ff7a1a;">
+        📝 Vocabulary ▾
+      </a>
 
-      <div class="card">
-        <div class="icon green">📄</div>
-        <h3>Writing</h3>
+      <div class="dropdown-content">
+        <a href="#">Vocabulary 1</a>
+        <a href="#">Vocabulary 2</a>
+        <a href="#">Vocabulary 3</a>
       </div>
 
     </div>
@@ -445,36 +467,44 @@
 
     <h2>Level 4</h2>
 
-    <div class="cards">
+    <div class="dropdown">
 
-      <div class="card">
-        <div class="icon blue">📘</div>
-        <h3>Reading</h3>
+      <a class="btn" href="#">
+        📘 Reading ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Unit 1</a>
+        <a href="#">Unit 2</a>
+        <a href="#">Unit 3</a>
       </div>
 
-      <div class="card">
-        <div class="icon green">✏️</div>
-        <h3>Grammar</h3>
+    </div>
+
+    <div class="dropdown">
+
+      <a class="btn" href="#" style="background:#14a085;">
+        ✏️ Grammar ▾
+      </a>
+
+      <div class="dropdown-content">
+        <a href="#">Grammar 1</a>
+        <a href="#">Grammar 2</a>
+        <a href="#">Grammar 3</a>
       </div>
 
-      <div class="card">
-        <div class="icon orange">📝</div>
-        <h3>Vocabulary</h3>
-      </div>
+    </div>
 
-      <div class="card">
-        <div class="icon purple">🎧</div>
-        <h3>Listening</h3>
-      </div>
+    <div class="dropdown">
 
-      <div class="card">
-        <div class="icon blue">🗣️</div>
-        <h3>Speaking</h3>
-      </div>
+      <a class="btn" href="#" style="background:#ff7a1a;">
+        📝 Vocabulary ▾
+      </a>
 
-      <div class="card">
-        <div class="icon green">📄</div>
-        <h3>Writing</h3>
+      <div class="dropdown-content">
+        <a href="#">Vocabulary 1</a>
+        <a href="#">Vocabulary 2</a>
+        <a href="#">Vocabulary 3</a>
       </div>
 
     </div>
@@ -497,11 +527,6 @@
       <a class="download" href="#">Download</a>
     </div>
 
-    <div class="handout">
-      <strong>📄 Reading Practice</strong>
-      <a class="download" href="#">Download</a>
-    </div>
-
   </section>
 
   <!-- Videos -->
@@ -520,11 +545,6 @@
       <a class="download watch" href="#">Watch</a>
     </div>
 
-    <div class="video">
-      <strong>▶️ Present Perfect</strong>
-      <a class="download watch" href="#">Watch</a>
-    </div>
-
   </section>
 
   <!-- Resources -->
@@ -533,23 +553,14 @@
 
     <h2>Resources</h2>
 
-    <div class="cards">
+    <div class="handout">
+      <strong>🎨 Infographics</strong>
+      <a class="download" href="#">Open</a>
+    </div>
 
-      <div class="card">
-        <div class="icon blue">🎨</div>
-        <h3>Infographics</h3>
-      </div>
-
-      <div class="card">
-        <div class="icon green">📝</div>
-        <h3>Worksheets</h3>
-      </div>
-
-      <div class="card">
-        <div class="icon orange">🗣️</div>
-        <h3>Speaking Cards</h3>
-      </div>
-
+    <div class="handout">
+      <strong>📝 Worksheets</strong>
+      <a class="download" href="#">Open</a>
     </div>
 
   </section>
