@@ -1,371 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Mr. Metwally | English Teacher</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+
+    *{
+      box-sizing:border-box;
+      scroll-behavior:smooth;
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7fbff;
-      color: #1f2a44;
+    body{
+      margin:0;
+      font-family:Arial,sans-serif;
+      background:#f7fbff;
+      color:#1f2a44;
     }
 
-    header {
-      background: white;
-      padding: 15px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    header{
+      background:white;
+      padding:15px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 3px 15px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
-    .logo h2 {
-      margin: 0;
-      color: #102a5e;
+    .logo h2{
+      margin:0;
+      color:#102a5e;
     }
 
-    .logo p {
-      margin: 0;
-      color: #2b7cff;
-      font-weight: bold;
+    .logo p{
+      margin:0;
+      color:#2b7cff;
+      font-weight:bold;
     }
 
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #1f2a44;
-      font-weight: bold;
+    nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
     }
 
-    nav a:hover {
-      color: #2b7cff;
+    nav a{
+      text-decoration:none;
+      color:#1f2a44;
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    .hero {
-      margin: 30px auto;
-      width: 90%;
-      padding: 55px;
-      border-radius: 20px;
-      background: linear-gradient(120deg, #c8fff4, #e8f2ff, #ffd6f1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    nav a:hover{
+      color:#2b7cff;
     }
 
-    .hero h1 {
-      font-size: 45px;
-      margin: 0;
-      color: #102a5e;
+    /* Dropdown */
+
+    .dropdown{
+      position:relative;
+      display:inline-block;
     }
 
-    .hero span {
-      color: #008c89;
+    .dropdown-content{
+      display:none;
+      position:absolute;
+      background:white;
+      min-width:180px;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(0,0,0,0.15);
+      top:35px;
     }
 
-    .hero p {
-      font-size: 18px;
-      max-width: 520px;
-      line-height: 1.6;
+    .dropdown-content a{
+      display:block;
+      padding:14px;
+      color:#1f2a44;
     }
 
-    .hero-img {
-      font-size: 110px;
+    .dropdown-content a:hover{
+      background:#eef6ff;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 13px 24px;
-      border-radius: 25px;
-      text-decoration: none;
-      color: white;
-      background: #4f63d8;
-      font-weight: bold;
-      margin-top: 10px;
-      transition: 0.3s;
+    .dropdown:hover .dropdown-content{
+      display:block;
     }
 
-    .btn:hover {
-      transform: translateY(-4px);
-      opacity: 0.9;
+    /* Hero */
+
+    .hero{
+      width:90%;
+      margin:35px auto;
+      padding:55px;
+      border-radius:25px;
+      background:linear-gradient(120deg,#c8fff4,#e8f2ff,#ffd6f1);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
     }
 
-    section {
-      width: 90%;
-      margin: 30px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    .hero h1{
+      font-size:48px;
+      margin:0;
+      color:#102a5e;
     }
 
-    h2 {
-      color: #006b5f;
-      font-size: 30px;
+    .hero span{
+      color:#008c89;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 25px;
+    .hero p{
+      font-size:18px;
+      line-height:1.7;
+      max-width:550px;
     }
 
-    .card {
-      background: white;
-      border-radius: 18px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.1);
-      transition: 0.3s;
+    .hero-img{
+      font-size:110px;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      background:#4f63d8;
+      color:white;
+      padding:13px 24px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    .icon {
-      font-size: 45px;
-      margin-bottom: 10px;
+    .btn:hover{
+      transform:translateY(-4px);
+      opacity:0.9;
     }
 
-    .blue { color: #2b7cff; }
-    .green { color: #14a085; }
-    .orange { color: #ff7a1a; }
-    .purple { color: #7b4ce0; }
-
-    .handout, .video {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #f8fbff;
-      margin: 12px 0;
-      padding: 15px 20px;
-      border-radius: 14px;
-      border-left: 6px solid #14a085;
+    section{
+      width:90%;
+      margin:35px auto;
+      background:white;
+      padding:30px;
+      border-radius:22px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
     }
 
-    .video {
-      border-left-color: #7b4ce0;
+    h2{
+      color:#006b5f;
+      font-size:32px;
     }
 
-    .download {
-      text-decoration: none;
-      background: #14a085;
-      color: white;
-      padding: 9px 15px;
-      border-radius: 20px;
-      font-weight: bold;
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:25px;
     }
 
-    .watch {
-      background: #7b4ce0;
+    .card{
+      background:white;
+      border-radius:20px;
+      padding:30px;
+      text-align:center;
+      box-shadow:0 5px 18px rgba(0,0,0,0.1);
+      transition:0.3s;
     }
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #102a5e;
-      color: white;
-      margin-top: 40px;
+    .card:hover{
+      transform:translateY(-8px);
     }
 
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
+    .icon{
+      font-size:45px;
+      margin-bottom:10px;
+    }
+
+    .blue{
+      color:#2b7cff;
+    }
+
+    .green{
+      color:#14a085;
+    }
+
+    .orange{
+      color:#ff7a1a;
+    }
+
+    .purple{
+      color:#7b4ce0;
+    }
+
+    /* Files */
+
+    .handout,
+    .video{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:#f8fbff;
+      margin:12px 0;
+      padding:16px 20px;
+      border-radius:14px;
+      border-left:6px solid #14a085;
+    }
+
+    .video{
+      border-left-color:#7b4ce0;
+    }
+
+    .download{
+      text-decoration:none;
+      background:#14a085;
+      color:white;
+      padding:9px 16px;
+      border-radius:20px;
+      font-weight:bold;
+    }
+
+    .watch{
+      background:#7b4ce0;
+    }
+
+    footer{
+      background:#102a5e;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+    }
+
+    /* Mobile */
+
+    @media (max-width:768px){
+
+      header{
+        flex-direction:column;
       }
 
-      nav {
-        margin-top: 15px;
+      nav{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 8px;
+      .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:35px 20px;
       }
 
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 35px 20px;
+      .hero h1{
+        font-size:35px;
       }
 
-      .hero h1 {
-        font-size: 34px;
+      .hero-img{
+        margin-top:20px;
+        font-size:80px;
       }
 
-      .hero-img {
-        font-size: 80px;
-        margin-top: 20px;
-      }
     }
+
   </style>
+
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    <h2>📖 Mr. Metwally</h2>
-    <p>English Teacher</p>
+  <!-- Header -->
+
+  <header>
+
+    <div class="logo">
+      <h2>📖 Mr. Metwally</h2>
+      <p>English Teacher</p>
+    </div>
+
+    <nav>
+
+      <a href="#about">About</a>
+
+      <!-- Levels Dropdown -->
+
+      <div class="dropdown">
+
+        <a href="#">Levels ▾</a>
+
+        <div class="dropdown-content">
+
+          <a href="#level2">Level 2</a>
+          <a href="#level3">Level 3</a>
+          <a href="#level4">Level 4</a>
+
+        </div>
+
+      </div>
+
+      <a href="#handouts">Handouts</a>
+      <a href="#videos">Videos</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+  </header>
+
+  <!-- Hero -->
+
+  <div class="hero">
+
+    <div>
+
+      <h1>
+        Welcome! <br>
+        <span>I’m Mr. Metwally</span>
+      </h1>
+
+      <p>
+        English lessons, videos, handouts and learning resources
+        organised by level and skill.
+      </p>
+
+      <a class="btn" href="#level2">
+        ⭐ Start Learning
+      </a>
+
+    </div>
+
+    <div class="hero-img">
+      📚✏️
+    </div>
+
   </div>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#lessons">Lessons</a>
-    <a href="#handouts">Handouts</a>
-    <a href="#videos">Videos</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- About -->
 
-<div class="hero">
-  <div>
-    <h1>Welcome!<br><span>I’m Mr. Metwally</span></h1>
+  <section id="about">
+
+    <h2>About</h2>
+
     <p>
-      Here you will find English lessons, handouts, videos,
-      and useful resources to help you learn and improve.
+      Welcome to my English learning website.
+      Here students can access lessons, handouts,
+      videos, classroom activities and learning resources
+      organised by level and skill.
     </p>
-    <a class="btn" href="#lessons">⭐ Let’s Learn Together</a>
-  </div>
 
-  <div class="hero-img">📚✏️</div>
-</div>
+  </section>
 
-<section id="about">
-  <h2>About</h2>
-  <p>
-    This website is designed for English learners. You can use it to access
-    lessons, handouts, worksheets, videos and classroom materials.
-  </p>
-</section>
+  <!-- Level 2 -->
 
-<section id="lessons">
-  <h2>Lessons</h2>
+  <section id="level2">
 
-  <div class="cards">
-    <div class="card">
-      <div class="icon blue">📘</div>
-      <h3>Grammar</h3>
-      <p>Present Simple, Past Simple, Present Perfect and more.</p>
-      <a class="btn" href="#">Explore Lessons</a>
+    <h2>Level 2</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon blue">📘</div>
+        <h3>Reading</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon green">✏️</div>
+        <h3>Grammar</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon orange">📝</div>
+        <h3>Vocabulary</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon purple">🎧</div>
+        <h3>Listening</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon blue">🗣️</div>
+        <h3>Speaking</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon green">📄</div>
+        <h3>Writing</h3>
+      </div>
+
     </div>
 
-    <div class="card">
-      <div class="icon green">▶️</div>
-      <h3>Videos</h3>
-      <p>Helpful videos to explain topics clearly.</p>
-      <a class="btn" href="#videos" style="background:#14a085;">Watch Videos</a>
+  </section>
+
+  <!-- Level 3 -->
+
+  <section id="level3">
+
+    <h2>Level 3</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon blue">📘</div>
+        <h3>Reading</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon green">✏️</div>
+        <h3>Grammar</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon orange">📝</div>
+        <h3>Vocabulary</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon purple">🎧</div>
+        <h3>Listening</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon blue">🗣️</div>
+        <h3>Speaking</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon green">📄</div>
+        <h3>Writing</h3>
+      </div>
+
     </div>
 
-    <div class="card">
-      <div class="icon orange">📄</div>
-      <h3>Handouts</h3>
-      <p>Download handouts, worksheets and useful files.</p>
-      <a class="btn" href="#handouts" style="background:#ff7a1a;">View Handouts</a>
+  </section>
+
+  <!-- Level 4 -->
+
+  <section id="level4">
+
+    <h2>Level 4</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon blue">📘</div>
+        <h3>Reading</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon green">✏️</div>
+        <h3>Grammar</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon orange">📝</div>
+        <h3>Vocabulary</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon purple">🎧</div>
+        <h3>Listening</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon blue">🗣️</div>
+        <h3>Speaking</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon green">📄</div>
+        <h3>Writing</h3>
+      </div>
+
     </div>
 
-    <div class="card">
-      <div class="icon purple">⭐</div>
-      <h3>Resources</h3>
-      <p>Extra materials to support your learning.</p>
-      <a class="btn" href="#resources" style="background:#7b4ce0;">See Resources</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="handouts">
-  <h2>Handouts</h2>
-  <p>Download useful handouts and worksheets.</p>
+  <!-- Handouts -->
 
-  <div class="handout">
-    <strong>📄 Grammar Worksheet</strong>
-    <a class="download" href="#">Download</a>
-  </div>
+  <section id="handouts">
 
-  <div class="handout">
-    <strong>📄 Vocabulary List</strong>
-    <a class="download" href="#">Download</a>
-  </div>
+    <h2>Handouts</h2>
 
-  <div class="handout">
-    <strong>📄 Reading Comprehension</strong>
-    <a class="download" href="#">Download</a>
-  </div>
-
-  <div class="handout">
-    <strong>📄 Speaking Activity</strong>
-    <a class="download" href="#">Download</a>
-  </div>
-</section>
-
-<section id="videos">
-  <h2>Videos</h2>
-  <p>Watch videos to understand topics better.</p>
-
-  <div class="video">
-    <strong>▶️ Present Simple — Explained</strong>
-    <a class="download watch" href="#">Watch</a>
-  </div>
-
-  <div class="video">
-    <strong>▶️ Past Simple — Explained</strong>
-    <a class="download watch" href="#">Watch</a>
-  </div>
-
-  <div class="video">
-    <strong>▶️ Present Perfect — Explained</strong>
-    <a class="download watch" href="#">Watch</a>
-  </div>
-
-  <div class="video">
-    <strong>▶️ Question Tags — Explained</strong>
-    <a class="download watch" href="#">Watch</a>
-  </div>
-</section>
-
-<section id="resources">
-  <h2>Resources</h2>
-  <div class="cards">
-    <div class="card">
-      <div class="icon blue">📝</div>
-      <h3>Worksheets</h3>
-      <p>Extra practice for class and home.</p>
+    <div class="handout">
+      <strong>📄 Grammar Worksheet</strong>
+      <a class="download" href="#">Download</a>
     </div>
 
-    <div class="card">
-      <div class="icon green">🗣️</div>
-      <h3>Speaking Cards</h3>
-      <p>Questions and prompts for speaking practice.</p>
+    <div class="handout">
+      <strong>📄 Vocabulary List</strong>
+      <a class="download" href="#">Download</a>
     </div>
 
-    <div class="card">
-      <div class="icon orange">🎨</div>
-      <h3>Infographics</h3>
-      <p>Clear visual grammar and vocabulary summaries.</p>
+    <div class="handout">
+      <strong>📄 Reading Practice</strong>
+      <a class="download" href="#">Download</a>
     </div>
-  </div>
-</section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: your-email@example.com</p>
-</section>
+  </section>
 
-<footer>
-  <p>© 2026 Mr. Metwally | English Teacher Website</p>
-</footer>
+  <!-- Videos -->
+
+  <section id="videos">
+
+    <h2>Videos</h2>
+
+    <div class="video">
+      <strong>▶️ Present Simple</strong>
+      <a class="download watch" href="#">Watch</a>
+    </div>
+
+    <div class="video">
+      <strong>▶️ Past Simple</strong>
+      <a class="download watch" href="#">Watch</a>
+    </div>
+
+    <div class="video">
+      <strong>▶️ Present Perfect</strong>
+      <a class="download watch" href="#">Watch</a>
+    </div>
+
+  </section>
+
+  <!-- Resources -->
+
+  <section id="resources">
+
+    <h2>Resources</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon blue">🎨</div>
+        <h3>Infographics</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon green">📝</div>
+        <h3>Worksheets</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon orange">🗣️</div>
+        <h3>Speaking Cards</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+
+  <section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>Email: your-email@example.com</p>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p>
+      © 2026 Mr. Metwally | English Teacher Website
+    </p>
+
+  </footer>
 
 </body>
+
 </html>
