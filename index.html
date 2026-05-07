@@ -1,35 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mr. Metwally | English Teacher</title>
+
+  <style>
+
+    *{
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Arial,sans-serif;
+      background:#f7fbff;
+      color:#1f2a44;
+    }
+
+    /* HEADER */
+
+    header{
+      background:white;
+      padding:15px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 3px 15px rgba(0,0,0,0.08);
+    }
+
+    .logo h2{
+      margin:0;
+      color:#102a5e;
+    }
+
+    .logo p{
+      margin:0;
+      color:#2b7cff;
+      font-weight:bold;
+    }
+
+    nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#1f2a44;
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      color:#2b7cff;
+    }
+
+    /* DROPDOWN */
+
+    .dropdown{
+      position:relative;
+      display:inline-block;
+      margin:10px;
+    }
+
+    .dropdown-content{
+      display:none;
+      position:absolute;
+      background:white;
+      min-width:230px;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(0,0,0,0.15);
+      z-index:100;
+    }
+
+    .dropdown-content a{
+      display:block;
+      padding:14px;
+      color:#1f2a44;
+      text-decoration:none;
+    }
+
+    .dropdown-content a:hover{
+      background:#eef6ff;
+    }
+
+    .dropdown:hover .dropdown-content{
+      display:block;
+    }
+
+    /* HERO */
+
+    .hero{
+      width:90%;
+      margin:35px auto;
+      padding:55px;
+      border-radius:25px;
+      background:linear-gradient(120deg,#c8fff4,#e8f2ff,#ffd6f1);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .hero h1{
+      font-size:48px;
+      margin:0;
+      color:#102a5e;
+    }
+
+    .hero span{
+      color:#008c89;
+    }
+
+    .hero p{
+      font-size:18px;
+      line-height:1.7;
+      max-width:550px;
+    }
+
+    .hero-img{
+      font-size:110px;
+    }
+
+    /* BUTTON */
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      background:#4f63d8;
+      color:white;
+      padding:13px 24px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      opacity:0.9;
+    }
+
+    /* SECTIONS */
+
+    section{
+      width:90%;
+      margin:35px auto;
+      background:white;
+      padding:30px;
+      border-radius:22px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    h2{
+      color:#006b5f;
+      font-size:32px;
+    }
+
+    /* FILES */
+
+    .handout,
+    .video{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:#f8fbff;
+      margin:12px 0;
+      padding:16px 20px;
+      border-radius:14px;
+      border-left:6px solid #14a085;
+    }
+
+    .video{
+      border-left-color:#7b4ce0;
+    }
+
+    .download{
+      text-decoration:none;
+      background:#14a085;
+      color:white;
+      padding:9px 16px;
+      border-radius:20px;
+      font-weight:bold;
+    }
+
+    .watch{
+      background:#7b4ce0;
+    }
+
+    /* INTERACTIVE GRAMMAR */
+
+    details{
+      background:#f8fbff;
+      margin:15px 0;
+      padding:18px;
+      border-radius:16px;
+      border-left:6px solid #2b7cff;
+      box-shadow:0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    summary{
+      font-size:22px;
+      font-weight:bold;
+      cursor:pointer;
+      color:#102a5e;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:15px;
+    }
+
+    th{
+      background:#2b7cff;
+      color:white;
+    }
+
+    td, th{
+      border:1px solid #ddd;
+      padding:12px;
+      text-align:center;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:15px;
+      margin-top:20px;
+    }
+
+    .card{
+      background:white;
+      padding:20px;
+      border-radius:18px;
+      text-align:center;
+      box-shadow:0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .frequency div{
+      background:#eef6ff;
+      margin:8px 0;
+      padding:12px;
+      border-radius:12px;
+      font-weight:bold;
+    }
+
+    footer{
+      background:#102a5e;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        justify-content:center;
+        margin-top:15px;
+      }
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:35px 20px;
+      }
+
+      .hero h1{
+        font-size:35px;
+      }
+
+      .hero-img{
+        margin-top:20px;
+        font-size:80px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="logo">
+    <h2>📖 Mr. Metwally</h2>
+    <p>English Teacher</p>
+  </div>
+
+  <nav>
+
+    <a href="#about">About</a>
+
+    <!-- LEVELS -->
+
+    <div class="dropdown">
+
+      <a href="#">Levels ▾</a>
+
+      <div class="dropdown-content">
+
+        <a href="#level2">Level 2</a>
+        <a href="#level3">Level 3</a>
+        <a href="#level4">Level 4</a>
+
+      </div>
+
+    </div>
+
+    <a href="#handouts">Handouts</a>
+    <a href="#videos">Videos</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+</header>
+
+<!-- HERO -->
+
+<div class="hero">
+
+  <div>
+
+    <h1>
+      Welcome! <br>
+      <span>I’m Mr. Metwally</span>
+    </h1>
+
+    <p>
+      English lessons, videos, handouts and learning resources
+      organised by level and skill.
+    </p>
+
+    <a class="btn" href="#level2">
+      ⭐ Start Learning
+    </a>
+
+  </div>
+
+  <div class="hero-img">
+    📚✏️
+  </div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <h2>About</h2>
+
+  <p>
+    Welcome to my English learning website.
+    Here students can access lessons, handouts,
+    videos, classroom activities and learning resources
+    organised by level and skill.
+  </p>
+
+</section>
+
+<!-- LEVEL 2 -->
+
+<section id="level2">
+
+  <h2>Level 2</h2>
+
+  <div class="dropdown">
+
+    <a class="btn" href="#">
+      ✏️ Grammar ▾
+    </a>
+
+    <div class="dropdown-content">
+
+      <a href="#present-simple">
+        Present Simple
+      </a>
+
+      <a href="#">
+        Past Simple
+      </a>
+
+      <a href="#">
+        Present Perfect
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRESENT SIMPLE -->
+
 <section id="present-simple">
 
   <h2>Present Simple</h2>
-  <p>Use it. Understand it. Master it.</p>
+
+  <p>
+    Use it. Understand it. Master it.
+  </p>
 
   <details open>
-    <summary>1. What is it?</summary>
+
+    <summary>
+      1. What is it?
+    </summary>
+
     <p>
-      The Present Simple is used to talk about actions that are regular,
-      true, or always happen.
+      The Present Simple is used to talk about actions
+      that are regular, true, or always happen.
     </p>
+
     <strong>Keywords:</strong>
-    <p>always, usually, often, sometimes, rarely, never, every day, on Mondays.</p>
+
+    <p>
+      always, usually, often, sometimes,
+      rarely, never, every day, on Mondays.
+    </p>
+
   </details>
 
   <details>
-    <summary>2. Uses</summary>
+
+    <summary>
+      2. Uses
+    </summary>
 
     <div class="cards">
-      <div class="card">🪥<h3>Habits</h3><p>I brush my teeth every morning.</p></div>
-      <div class="card">🌍<h3>Truths</h3><p>Water boils at 100°C.</p></div>
-      <div class="card">📖<h3>Facts</h3><p>Bananas grow in tropical countries.</p></div>
-      <div class="card">🚌<h3>Schedules</h3><p>The bus leaves at 8 o’clock.</p></div>
-      <div class="card">❤️<h3>Feelings</h3><p>I love chocolate.</p></div>
+
+      <div class="card">
+        🪥
+        <h3>Habits</h3>
+        <p>I brush my teeth every morning.</p>
+      </div>
+
+      <div class="card">
+        🌍
+        <h3>Truths</h3>
+        <p>Water boils at 100°C.</p>
+      </div>
+
+      <div class="card">
+        📖
+        <h3>Facts</h3>
+        <p>Bananas grow in tropical countries.</p>
+      </div>
+
+      <div class="card">
+        🚌
+        <h3>Schedules</h3>
+        <p>The bus leaves at 8 o’clock.</p>
+      </div>
+
+      <div class="card">
+        ❤️
+        <h3>Feelings</h3>
+        <p>I love chocolate.</p>
+      </div>
+
     </div>
 
   </details>
 
   <details>
-    <summary>3. Form</summary>
+
+    <summary>
+      3. Form
+    </summary>
 
     <table>
+
       <tr>
         <th>Subject</th>
         <th>Affirmative</th>
@@ -50,55 +511,209 @@
         <td>He doesn’t play football.</td>
         <td>Does he play football?</td>
       </tr>
+
     </table>
 
   </details>
 
   <details>
-    <summary>4. Spelling Rules</summary>
+
+    <summary>
+      4. Spelling Rules
+    </summary>
+
     <ul>
-      <li>Most verbs → add <b>-s</b>: play → plays</li>
-      <li>Verbs ending in -s, -sh, -ch, -x, -o → add <b>-es</b>: watch → watches</li>
-      <li>Consonant + y → change y to i + es: study → studies</li>
-      <li>Vowel + y → add -s: enjoy → enjoys</li>
+
+      <li>
+        Most verbs → add -s:
+        play → plays
+      </li>
+
+      <li>
+        Verbs ending in -s, -sh, -ch, -x, -o
+        → add -es:
+        watch → watches
+      </li>
+
+      <li>
+        Consonant + y
+        → y changes to i + es:
+        study → studies
+      </li>
+
+      <li>
+        Vowel + y
+        → add -s:
+        enjoy → enjoys
+      </li>
+
     </ul>
+
   </details>
 
   <details>
-    <summary>5. Adverbs of Frequency</summary>
+
+    <summary>
+      5. Adverbs of Frequency
+    </summary>
+
     <div class="frequency">
+
       <div>100% always</div>
       <div>80% usually</div>
       <div>60% often</div>
       <div>40% sometimes</div>
       <div>20% rarely</div>
       <div>0% never</div>
+
     </div>
 
     <p>
       They usually come before the main verb.
-      Example: I always wake up early.
     </p>
+
+    <p>
+      Example:
+      I always wake up early.
+    </p>
+
   </details>
 
   <details>
-    <summary>6. Time Expressions</summary>
+
+    <summary>
+      6. Time Expressions
+    </summary>
+
     <ul>
+
       <li>every day / week / month / year</li>
+
       <li>once a week / twice a month</li>
+
       <li>on Mondays</li>
+
       <li>in the morning / evening</li>
+
       <li>at night / at the weekend</li>
+
     </ul>
+
   </details>
 
   <details>
-    <summary>7. Common Mistakes</summary>
+
+    <summary>
+      7. Common Mistakes
+    </summary>
+
     <ul>
-      <li>❌ He go to school. → ✅ He goes to school.</li>
-      <li>❌ She don’t like coffee. → ✅ She doesn’t like coffee.</li>
-      <li>❌ Do they goes? → ✅ Do they go?</li>
+
+      <li>
+        ❌ He go to school.
+        → ✅ He goes to school.
+      </li>
+
+      <li>
+        ❌ She don’t like coffee.
+        → ✅ She doesn’t like coffee.
+      </li>
+
+      <li>
+        ❌ Do they goes?
+        → ✅ Do they go?
+      </li>
+
     </ul>
+
   </details>
 
 </section>
+
+<!-- HANDOUTS -->
+
+<section id="handouts">
+
+  <h2>Handouts</h2>
+
+  <div class="handout">
+    <strong>📄 Grammar Worksheet</strong>
+    <a class="download" href="#">
+      Download
+    </a>
+  </div>
+
+  <div class="handout">
+    <strong>📄 Vocabulary List</strong>
+    <a class="download" href="#">
+      Download
+    </a>
+  </div>
+
+</section>
+
+<!-- VIDEOS -->
+
+<section id="videos">
+
+  <h2>Videos</h2>
+
+  <div class="video">
+
+    <strong>
+      ▶️ Present Simple
+    </strong>
+
+    <a class="download watch" href="#">
+      Watch
+    </a>
+
+  </div>
+
+</section>
+
+<!-- RESOURCES -->
+
+<section id="resources">
+
+  <h2>Resources</h2>
+
+  <div class="handout">
+
+    <strong>
+      🎨 Infographics
+    </strong>
+
+    <a class="download" href="#">
+      Open
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <h2>Contact</h2>
+
+  <p>
+    Email: your-email@example.com
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    © 2026 Mr. Metwally | English Teacher Website
+  </p>
+
+</footer>
+
+</body>
+
+</html>
