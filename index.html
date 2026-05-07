@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mr. Metwally | English Teacher</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -21,6 +25,8 @@ body{
   color:#0f2448;
   font-size:22px;
 }
+
+/* HEADER */
 
 header{
   background:white;
@@ -57,6 +63,8 @@ nav a{
   font-weight:bold;
 }
 
+/* DROPDOWN */
+
 .dropdown{
   position:relative;
 }
@@ -80,6 +88,8 @@ nav a{
 .dropdown:hover .dropdown-content{
   display:block;
 }
+
+/* HERO */
 
 .hero{
   width:92%;
@@ -122,6 +132,8 @@ nav a{
   font-size:90px;
 }
 
+/* SECTION */
+
 section{
   width:92%;
   margin:30px auto;
@@ -138,6 +150,8 @@ h2{
   color:#08265c;
 }
 
+/* BUTTON */
+
 .btn{
   display:inline-block;
   margin:10px;
@@ -150,17 +164,7 @@ h2{
   border:2px solid #08265c;
 }
 
-.lesson-title{
-  text-align:center;
-}
-
-.lesson-title h2{
-  font-size:70px;
-  background:#dff3ff;
-  display:inline-block;
-  padding:10px 35px;
-  border-radius:20px;
-}
+/* DETAILS */
 
 details{
   margin:22px 0;
@@ -188,6 +192,8 @@ summary{
 .teal summary{background:#008c89;}
 .red summary{background:#d62828;}
 
+/* CARDS */
+
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -201,18 +207,44 @@ summary{
   border-radius:18px;
   padding:20px;
   text-align:center;
-  min-height:190px;
+  min-height:200px;
 }
 
-.card .pic{
-  font-size:58px;
-  margin-bottom:8px;
+.icon-big{
+  font-size:65px;
+  margin-bottom:10px;
 }
 
 .card h3{
-  font-size:28px;
-  margin-bottom:8px;
+  font-size:30px;
+  margin-bottom:10px;
 }
+
+/* MINI ICONS */
+
+.mini-icons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+
+.mini-box{
+  background:#eef6ff;
+  border-radius:14px;
+  padding:10px;
+  text-align:center;
+  min-width:110px;
+  border:2px dashed #9bc3ff;
+}
+
+.mini-box span{
+  display:block;
+  font-size:40px;
+  margin-bottom:6px;
+}
+
+/* TABLE */
 
 table{
   width:100%;
@@ -237,19 +269,29 @@ td{
   text-align:center;
 }
 
-.spelling-box{
+/* SPELLING */
+
+.spelling-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  margin-top:20px;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  margin-top:18px;
 }
 
-.note{
-  border:2px solid #ffb703;
-  border-radius:16px;
-  padding:18px;
-  background:#fff8e1;
+.rule-card{
+  background:#fffdf7;
+  border:2px solid #ffd166;
+  border-radius:18px;
+  padding:15px;
+  text-align:center;
 }
+
+.rule-card .emoji{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+/* FREQUENCY */
 
 .frequency-row{
   display:flex;
@@ -278,6 +320,8 @@ td{
 .rarely{background:#38bdf8;}
 .never{background:#8b5cf6;}
 
+/* LEVELS */
+
 .level-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -288,6 +332,8 @@ td{
   border-left:4px solid #2b83c6;
   padding:15px;
 }
+
+/* FILES */
 
 .file-box{
   display:flex;
@@ -308,6 +354,8 @@ td{
   text-decoration:none;
 }
 
+/* FOOTER */
+
 footer{
   background:#08265c;
   color:white;
@@ -316,333 +364,504 @@ footer{
   margin-top:40px;
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
-  header{
-    flex-direction:column;
-    text-align:center;
-  }
 
-  nav{
-    justify-content:center;
-    margin-top:15px;
-  }
-
-  .hero h2{
-    font-size:45px;
-  }
-
-  .lesson-title h2{
-    font-size:45px;
-  }
-
-  .spelling-box{
-    grid-template-columns:1fr;
-  }
-
-  table{
-    font-size:18px;
-  }
+header{
+  flex-direction:column;
+  text-align:center;
 }
+
+nav{
+  justify-content:center;
+  margin-top:15px;
+}
+
+.hero h2{
+  font-size:45px;
+}
+
+table{
+  font-size:18px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <div class="logo">
-    <h1>📖 Mr. Metwally</h1>
-    <p>English Teacher</p>
-  </div>
 
-  <nav>
-    <a href="#about">About</a>
+<div class="logo">
+  <h1>📖 Mr. Metwally</h1>
+  <p>English Teacher</p>
+</div>
 
-    <div class="dropdown">
-      <a href="#">Levels ▾</a>
-      <div class="dropdown-content">
-        <a href="#level2">Level 2</a>
-        <a href="#level3">Level 3</a>
-        <a href="#level4">Level 4</a>
-      </div>
-    </div>
+<nav>
 
-    <a href="#handouts">Handouts</a>
-    <a href="#videos">Videos</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<a href="#about">About</a>
+
+<div class="dropdown">
+
+<a href="#">Levels ▾</a>
+
+<div class="dropdown-content">
+  <a href="#level2">Level 2</a>
+  <a href="#level3">Level 3</a>
+  <a href="#level4">Level 4</a>
+</div>
+
+</div>
+
+<a href="#handouts">Handouts</a>
+<a href="#videos">Videos</a>
+<a href="#resources">Resources</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
 </header>
 
+<!-- HERO -->
+
 <div class="hero">
-  <div class="hero-top">
-    <div class="illustration">🗓️⏰</div>
-    <div>
-      <h2>PRESENT SIMPLE</h2>
-      <div class="tagline">Use it. Understand it. Master it.</div>
-    </div>
-    <div class="illustration">💡</div>
+
+<div class="hero-top">
+
+<div class="illustration">🗓️⏰</div>
+
+<div>
+  <h2>PRESENT SIMPLE</h2>
+  <div class="tagline">
+    Use it. Understand it. Master it.
   </div>
 </div>
 
+<div class="illustration">💡</div>
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
 <section id="about">
-  <h2>About</h2>
-  <p>
-    Welcome to my English learning website. Here students can access lessons,
-    handouts, videos, classroom activities and learning resources organised by level and skill.
-  </p>
+
+<h2>About</h2>
+
+<p>
+Welcome to my English learning website.
+Here students can access lessons, handouts,
+videos, classroom activities and learning resources organised by level and skill.
+</p>
+
 </section>
+
+<!-- LEVEL 2 -->
 
 <section id="level2">
-  <h2>Level 2</h2>
 
-  <div class="dropdown">
-    <a class="btn" href="#">✏️ Grammar ▾</a>
-    <div class="dropdown-content">
-      <a href="#present-simple">Present Simple</a>
-      <a href="#">Past Simple</a>
-      <a href="#">Present Perfect</a>
-    </div>
-  </div>
+<h2>Level 2</h2>
 
-  <div class="dropdown">
-    <a class="btn" href="#" style="background:#14a085;">📘 Reading ▾</a>
-    <div class="dropdown-content">
-      <a href="#">Unit 1</a>
-      <a href="#">Unit 2</a>
-      <a href="#">Unit 3</a>
-    </div>
-  </div>
+<div class="dropdown">
 
-  <div class="dropdown">
-    <a class="btn" href="#" style="background:#ff7a1a;">🎧 Listening ▾</a>
-    <div class="dropdown-content">
-      <a href="#">Audio 1</a>
-      <a href="#">Audio 2</a>
-      <a href="#">Audio 3</a>
-    </div>
-  </div>
+<a class="btn" href="#">
+✏️ Grammar ▾
+</a>
+
+<div class="dropdown-content">
+
+<a href="#present-simple">
+Present Simple
+</a>
+
+<a href="#">
+Past Simple
+</a>
+
+<a href="#">
+Present Perfect
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<a class="btn" href="#" style="background:#14a085;">
+📘 Reading ▾
+</a>
+
+<div class="dropdown-content">
+  <a href="#">Unit 1</a>
+  <a href="#">Unit 2</a>
+  <a href="#">Unit 3</a>
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<a class="btn" href="#" style="background:#ff7a1a;">
+🎧 Listening ▾
+</a>
+
+<div class="dropdown-content">
+  <a href="#">Audio 1</a>
+  <a href="#">Audio 2</a>
+  <a href="#">Audio 3</a>
+</div>
+
+</div>
+
 </section>
+
+<!-- PRESENT SIMPLE -->
 
 <section id="present-simple">
 
-  <div class="lesson-title">
-    <h2>PRESENT SIMPLE</h2>
-    <p class="tagline">Truths, habits, routines, facts and fixed situations</p>
-  </div>
+<h2>PRESENT SIMPLE</h2>
 
-  <details open>
-    <summary>1. WHAT IS IT?</summary>
-    <p>
-      The Present Simple is used to talk about actions that are regular,
-      true or always happen.
-    </p>
-    <p><b>Keywords:</b></p>
-    <p>
-      always, usually, often, sometimes, rarely, never,
-      every day/week/month, once a week, on Mondays, etc.
-    </p>
-  </details>
+<div class="tagline">
+Truths, habits, routines, facts and fixed situations
+</div>
 
-  <details open class="green">
-    <summary>2. USES</summary>
+<!-- WHAT IS IT -->
 
-    <div class="cards">
-      <div class="card">
-        <div class="pic">🪥</div>
-        <h3>Habits & Routines</h3>
-        <p>I brush my teeth every morning.</p>
-      </div>
+<details open>
 
-      <div class="card">
-        <div class="pic">🌍</div>
-        <h3>General Truths</h3>
-        <p>Water boils at 100°C.</p>
-      </div>
+<summary>
+1. WHAT IS IT?
+</summary>
 
-      <div class="card">
-        <div class="pic">📖</div>
-        <h3>Facts</h3>
-        <p>Bananas grow in tropical countries.</p>
-      </div>
+<p>
+The Present Simple is used to talk about actions that are regular,
+true or always happen.
+</p>
 
-      <div class="card">
-        <div class="pic">🚌</div>
-        <h3>Schedules</h3>
-        <p>The bus leaves at 8 o’clock.</p>
-      </div>
+<div class="mini-icons">
 
-      <div class="card">
-        <div class="pic">❤️</div>
-        <h3>Feelings & States</h3>
-        <p>I love chocolate.</p>
-      </div>
-    </div>
-  </details>
+<div class="mini-box">
+<span>📅</span>
+every day
+</div>
 
-  <details open class="purple">
-    <summary>3. FORM</summary>
+<div class="mini-box">
+<span>🕒</span>
+usually
+</div>
 
-    <table>
-      <tr>
-        <th>Subject</th>
-        <th>Affirmative (+)</th>
-        <th>Negative (-)</th>
-        <th>Question (?)</th>
-      </tr>
+<div class="mini-box">
+<span>🔁</span>
+often
+</div>
 
-      <tr>
-        <td>I / You / We / They</td>
-        <td>I play football.</td>
-        <td>I do not / don’t play football.</td>
-        <td>Do I play football?</td>
-      </tr>
+<div class="mini-box">
+<span>📌</span>
+on Mondays
+</div>
 
-      <tr>
-        <td>He / She / It</td>
-        <td>He plays football.</td>
-        <td>He does not / doesn’t play football.</td>
-        <td>Does he play football?</td>
-      </tr>
-    </table>
+<div class="mini-box">
+<span>❌</span>
+never
+</div>
 
-    <div class="spelling-box">
-      <div class="note">
-        ⭐ <b>He / She / It</b> → add <b>-s / -es</b> to the verb<br><br>
-        play → plays &nbsp; watch → watches &nbsp; go → goes<br>
-        study → studies &nbsp; have → has
-      </div>
+</div>
 
-      <div class="note">
-        ⚙️ <b>Spelling Rules</b>
-        <ul>
-          <li>Most verbs: add -s</li>
-          <li>-s, -sh, -ch, -x, -o → add -es</li>
-          <li>consonant + y → change y to i + es</li>
-          <li>vowel + y → add -s</li>
-        </ul>
-      </div>
-    </div>
-  </details>
+</details>
 
-  <details open class="orange">
-    <summary>4. ADVERBS OF FREQUENCY</summary>
+<!-- USES -->
 
-    <div class="frequency-row"><div class="percent">100%</div><div class="bar always">always</div></div>
-    <div class="frequency-row"><div class="percent">80%</div><div class="bar usually">usually</div></div>
-    <div class="frequency-row"><div class="percent">60%</div><div class="bar often">often</div></div>
-    <div class="frequency-row"><div class="percent">40%</div><div class="bar sometimes">sometimes</div></div>
-    <div class="frequency-row"><div class="percent">20%</div><div class="bar rarely">rarely</div></div>
-    <div class="frequency-row"><div class="percent">0%</div><div class="bar never">never</div></div>
+<details open class="green">
 
-    <p>They usually come before the main verb.</p>
-    <p><b>Example:</b> I always wake up early.</p>
-  </details>
+<summary>
+2. USES
+</summary>
 
-  <details open class="teal">
-    <summary>5. TIME EXPRESSIONS</summary>
-    <ul>
-      <li>⏰ every day / week / month / year</li>
-      <li>📅 once a week / twice a month</li>
-      <li>🕒 on Mondays / in the morning</li>
-      <li>☀️ at night / at the weekend</li>
-      <li>🕰️ in the summer / in the evening</li>
-    </ul>
-  </details>
+<div class="cards">
 
-  <details open>
-    <summary>6. EXAMPLES BY LEVEL</summary>
+<div class="card">
+<div class="icon-big">🪥</div>
+<h3>Habits</h3>
+<p>every morning</p>
+</div>
 
-    <div class="level-grid">
-      <div class="level-card">
-        <h3>⭐ Beginner</h3>
-        <ul>
-          <li>I live in Cairo.</li>
-          <li>She has a cat.</li>
-          <li>They play football.</li>
-          <li>The sun rises in the east.</li>
-        </ul>
-      </div>
+<div class="card">
+<div class="icon-big">🌍</div>
+<h3>Truths</h3>
+<p>100°C</p>
+</div>
 
-      <div class="level-card">
-        <h3>📖 Elementary</h3>
-        <ul>
-          <li>He works in a bank.</li>
-          <li>I usually walk to school.</li>
-          <li>They don’t watch TV.</li>
-          <li>Does she like coffee?</li>
-        </ul>
-      </div>
+<div class="card">
+<div class="icon-big">📖</div>
+<h3>Facts</h3>
+<p>tropical countries</p>
+</div>
 
-      <div class="level-card">
-        <h3>📈 Intermediate</h3>
-        <ul>
-          <li>I prefer tea to coffee.</li>
-          <li>She doesn’t like spicy food.</li>
-          <li>Do they often travel abroad?</li>
-          <li>He goes jogging every morning.</li>
-        </ul>
-      </div>
+<div class="card">
+<div class="icon-big">🚌</div>
+<h3>Schedules</h3>
+<p>8 o’clock</p>
+</div>
 
-      <div class="level-card">
-        <h3>🏆 Advanced</h3>
-        <ul>
-          <li>Society relies on rules.</li>
-          <li>Technology changes rapidly.</li>
-          <li>She consistently shows dedication.</li>
-          <li>Do you believe success comes from hard work?</li>
-        </ul>
-      </div>
-    </div>
-  </details>
+<div class="card">
+<div class="icon-big">❤️</div>
+<h3>Feelings</h3>
+<p>I love chocolate</p>
+</div>
 
-  <details open class="red">
-    <summary>7. COMMON MISTAKES</summary>
-    <ul>
-      <li>❌ He go to school every day. → ✅ He goes to school every day.</li>
-      <li>❌ She don’t like ice cream. → ✅ She doesn’t like ice cream.</li>
-      <li>❌ Do they goes to the park? → ✅ Do they go to the park?</li>
-      <li>❌ I always get up late. → ✅ I always get up late.</li>
-    </ul>
-  </details>
+</div>
+
+</details>
+
+<!-- FORM -->
+
+<details open class="purple">
+
+<summary>
+3. FORM
+</summary>
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Affirmative (+)</th>
+<th>Negative (-)</th>
+<th>Question (?)</th>
+</tr>
+
+<tr>
+<td>I / You / We / They</td>
+<td>I play football.</td>
+<td>I don’t play football.</td>
+<td>Do I play football?</td>
+</tr>
+
+<tr>
+<td>He / She / It</td>
+<td>He plays football.</td>
+<td>He doesn’t play football.</td>
+<td>Does he play football?</td>
+</tr>
+
+</table>
+
+</details>
+
+<!-- SPELLING -->
+
+<details open class="orange">
+
+<summary>
+4. SPELLING RULES
+</summary>
+
+<div class="spelling-grid">
+
+<div class="rule-card">
+<div class="emoji">⚽</div>
+play → plays
+</div>
+
+<div class="rule-card">
+<div class="emoji">📺</div>
+watch → watches
+</div>
+
+<div class="rule-card">
+<div class="emoji">📚</div>
+study → studies
+</div>
+
+<div class="rule-card">
+<div class="emoji">😊</div>
+enjoy → enjoys
+</div>
+
+</div>
+
+</details>
+
+<!-- FREQUENCY -->
+
+<details open class="teal">
+
+<summary>
+5. ADVERBS OF FREQUENCY
+</summary>
+
+<div class="frequency-row">
+<div class="percent">100%</div>
+<div class="bar always">always</div>
+</div>
+
+<div class="frequency-row">
+<div class="percent">80%</div>
+<div class="bar usually">usually</div>
+</div>
+
+<div class="frequency-row">
+<div class="percent">60%</div>
+<div class="bar often">often</div>
+</div>
+
+<div class="frequency-row">
+<div class="percent">40%</div>
+<div class="bar sometimes">sometimes</div>
+</div>
+
+<div class="frequency-row">
+<div class="percent">20%</div>
+<div class="bar rarely">rarely</div>
+</div>
+
+<div class="frequency-row">
+<div class="percent">0%</div>
+<div class="bar never">never</div>
+</div>
+
+</details>
+
+<!-- TIME EXPRESSIONS -->
+
+<details open>
+
+<summary>
+6. TIME EXPRESSIONS
+</summary>
+
+<div class="mini-icons">
+
+<div class="mini-box">
+<span>📅</span>
+every day
+</div>
+
+<div class="mini-box">
+<span>🕒</span>
+once a week
+</div>
+
+<div class="mini-box">
+<span>🌞</span>
+morning
+</div>
+
+<div class="mini-box">
+<span>🌙</span>
+night
+</div>
+
+<div class="mini-box">
+<span>📌</span>
+Mondays
+</div>
+
+</div>
+
+</details>
+
+<!-- COMMON MISTAKES -->
+
+<details open class="red">
+
+<summary>
+7. COMMON MISTAKES
+</summary>
+
+<ul>
+
+<li>
+❌ He go to school.
+→ ✅ He goes to school.
+</li>
+
+<li>
+❌ She don’t like coffee.
+→ ✅ She doesn’t like coffee.
+</li>
+
+<li>
+❌ Do they goes?
+→ ✅ Do they go?
+</li>
+
+</ul>
+
+</details>
 
 </section>
+
+<!-- HANDOUTS -->
 
 <section id="handouts">
-  <h2>Handouts</h2>
-  <div class="file-box">
-    <strong>📄 Grammar Worksheet</strong>
-    <a class="file-btn" href="#">Download</a>
-  </div>
-  <div class="file-box">
-    <strong>📄 Vocabulary List</strong>
-    <a class="file-btn" href="#">Download</a>
-  </div>
+
+<h2>Handouts</h2>
+
+<div class="file-box">
+<strong>📄 Grammar Worksheet</strong>
+<a class="file-btn" href="#">Download</a>
+</div>
+
+<div class="file-box">
+<strong>📄 Vocabulary List</strong>
+<a class="file-btn" href="#">Download</a>
+</div>
+
 </section>
+
+<!-- VIDEOS -->
 
 <section id="videos">
-  <h2>Videos</h2>
-  <div class="file-box">
-    <strong>▶️ Present Simple</strong>
-    <a class="file-btn" href="#" style="background:#7b4ce0;">Watch</a>
-  </div>
+
+<h2>Videos</h2>
+
+<div class="file-box">
+<strong>▶️ Present Simple</strong>
+<a class="file-btn" href="#" style="background:#7b4ce0;">Watch</a>
+</div>
+
 </section>
+
+<!-- RESOURCES -->
 
 <section id="resources">
-  <h2>Resources</h2>
-  <div class="file-box">
-    <strong>🎨 Infographics</strong>
-    <a class="file-btn" href="#">Open</a>
-  </div>
+
+<h2>Resources</h2>
+
+<div class="file-box">
+<strong>🎨 Infographics</strong>
+<a class="file-btn" href="#">Open</a>
+</div>
+
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: your-email@example.com</p>
+
+<h2>Contact</h2>
+
+<p>
+Email: your-email@example.com
+</p>
+
 </section>
 
 <footer>
-  <p>© 2026 Mr. Metwally | English Teacher Website</p>
+
+<p>
+© 2026 Mr. Metwally | English Teacher Website
+</p>
+
 </footer>
 
 </body>
+
 </html>
