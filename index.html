@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -11,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 
 <style>
-
 *{
   margin:0;
   padding:0;
@@ -24,8 +22,6 @@ body{
   color:#0f2448;
   font-size:22px;
 }
-
-/* HEADER */
 
 header{
   background:white;
@@ -62,8 +58,6 @@ nav a{
   font-weight:bold;
 }
 
-/* HERO */
-
 .hero{
   width:92%;
   margin:35px auto;
@@ -73,13 +67,6 @@ nav a{
   border:4px solid #08265c;
   box-shadow:10px 10px 0 #cfe2ff;
   text-align:center;
-}
-
-.hero-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
 }
 
 .hero h2{
@@ -107,12 +94,6 @@ nav a{
   color:#08265c;
 }
 
-.illustration{
-  font-size:80px;
-}
-
-/* SECTION */
-
 section{
   width:92%;
   margin:30px auto;
@@ -129,8 +110,6 @@ h2{
   color:#08265c;
 }
 
-/* BUTTON */
-
 .btn{
   display:inline-block;
   margin:10px;
@@ -146,13 +125,9 @@ h2{
   cursor:pointer;
 }
 
-/* HIDDEN */
-
 .lesson-hidden{
   display:none;
 }
-
-/* DETAILS */
 
 details{
   margin:22px 0;
@@ -180,8 +155,6 @@ summary{
 .teal summary{background:#008c89;}
 .red summary{background:#d62828;}
 
-/* CARDS */
-
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -195,14 +168,11 @@ summary{
   border-radius:18px;
   padding:20px;
   text-align:center;
-  min-height:200px;
 }
 
 .icon-big{
   font-size:65px;
 }
-
-/* MINI ICONS */
 
 .mini-icons{
   display:flex;
@@ -225,8 +195,6 @@ summary{
   font-size:40px;
 }
 
-/* TABLE */
-
 table{
   width:100%;
   border-collapse:collapse;
@@ -244,8 +212,6 @@ td{
   padding:14px;
   text-align:center;
 }
-
-/* SPELLING */
 
 .spelling-grid{
   display:grid;
@@ -265,8 +231,6 @@ td{
 .rule-card .emoji{
   font-size:45px;
 }
-
-/* FREQUENCY */
 
 .frequency-row{
   display:flex;
@@ -295,8 +259,6 @@ td{
 .rarely{background:#38bdf8;}
 .never{background:#8b5cf6;}
 
-/* FILES */
-
 .file-box{
   display:flex;
   justify-content:space-between;
@@ -315,8 +277,6 @@ td{
   border-radius:20px;
   text-decoration:none;
 }
-
-/* QUIZ */
 
 .quiz-question{
   background:#fffefa;
@@ -349,8 +309,6 @@ td{
   display:none;
 }
 
-/* FOOTER */
-
 footer{
   background:#08265c;
   color:white;
@@ -359,34 +317,29 @@ footer{
   margin-top:40px;
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
+  header{
+    flex-direction:column;
+    text-align:center;
+  }
 
-header{
-  flex-direction:column;
-  text-align:center;
+  nav{
+    justify-content:center;
+    margin-top:15px;
+  }
+
+  .hero h2{
+    font-size:42px;
+  }
+
+  .hero-note{
+    font-size:24px;
+  }
+
+  table{
+    font-size:17px;
+  }
 }
-
-nav{
-  justify-content:center;
-  margin-top:15px;
-}
-
-.hero h2{
-  font-size:42px;
-}
-
-.hero-note{
-  font-size:24px;
-}
-
-table{
-  font-size:17px;
-}
-
-}
-
 </style>
 
 </head>
@@ -394,90 +347,56 @@ table{
 <body>
 
 <header>
+  <div class="logo">
+    <h1>📖 Mr. Metwally</h1>
+    <p>English Teacher</p>
+  </div>
 
-<div class="logo">
-  <h1>📖 Mr. Metwally</h1>
-  <p>English Teacher</p>
-</div>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#level2">Level 2</a>
-  <a href="#handouts">Handouts</a>
-  <a href="#videos">Videos</a>
-  <a href="#resources">Resources</a>
-  <a href="#contact">Contact</a>
-</nav>
-
+  <nav>
+    <a href="#about">About</a>
+    <a href="#level2">Level 2</a>
+    <a href="#handouts">Handouts</a>
+    <a href="#videos">Videos</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-
 <div class="hero">
+  <h2>LEARN ENGLISH</h2>
 
-<div class="hero-top">
+  <div class="tagline">
+    Speak Confidently. Learn Creatively. Succeed Globally.
+  </div>
 
-<div class="illustration">🌍📚</div>
-
-<div>
-
-<h2>LEARN ENGLISH</h2>
-
-<div class="tagline">
-Speak Confidently. Learn Creatively. Succeed Globally.
+  <p class="hero-note">
+    Interactive lessons • Videos • Handouts • Real English
+  </p>
 </div>
-
-<p class="hero-note">
-Interactive lessons • Videos • Handouts • Real English
-</p>
-
-</div>
-
-<div class="illustration">🎓✨</div>
-
-</div>
-
-</div>
-
-<!-- ABOUT -->
 
 <section id="about">
-
-<h2>About</h2>
-
-<p>
-Welcome to my English learning website.
-Here students can access lessons, handouts,
-videos, classroom activities and learning resources organised by level and skill.
-</p>
-
+  <h2>About</h2>
+  <p>
+    Welcome to my English learning website.
+    Here students can access lessons, handouts,
+    videos, classroom activities and learning resources organised by level and skill.
+  </p>
 </section>
-
-<!-- LEVEL 2 -->
 
 <section id="level2">
+  <h2>Level 2</h2>
 
-<h2>Level 2</h2>
+  <button class="btn" onclick="toggleSection('present-simple')">
+    ✏️ Grammar: Present Simple
+  </button>
 
-<button class="btn" onclick="toggleLesson('present-simple')">
-✏️ Grammar: Present Simple
-</button>
+  <button class="btn" onclick="toggleSection('present-simple-test')" style="background:#d62828;">
+    📝 Present Simple Test
+  </button>
 
-<button class="btn" onclick="toggleLesson('present-simple-test')" style="background:#d62828;">
-📝 Present Simple Test
-</button>
-
-<a class="btn" href="#" style="background:#14a085;">
-📘 Reading
-</a>
-
-<a class="btn" href="#" style="background:#ff7a1a;">
-🎧 Listening
-</a>
-
+  <a class="btn" href="#" style="background:#14a085;">📘 Reading</a>
+  <a class="btn" href="#" style="background:#ff7a1a;">🎧 Listening</a>
 </section>
-
-<!-- PRESENT SIMPLE -->
 
 <section id="present-simple" class="lesson-hidden">
 
@@ -488,7 +407,6 @@ Truths, habits, routines, facts and fixed situations
 </div>
 
 <details open>
-
 <summary>1. WHAT IS IT?</summary>
 
 <p>
@@ -497,239 +415,227 @@ true or always happen.
 </p>
 
 <div class="mini-icons">
-
-<div class="mini-box"><span>📅</span>every day</div>
-<div class="mini-box"><span>🕒</span>usually</div>
-<div class="mini-box"><span>🔁</span>often</div>
-<div class="mini-box"><span>📌</span>on Mondays</div>
-<div class="mini-box"><span>❌</span>never</div>
-
+  <div class="mini-box"><span>📅</span>every day</div>
+  <div class="mini-box"><span>🕒</span>usually</div>
+  <div class="mini-box"><span>🔁</span>often</div>
+  <div class="mini-box"><span>📌</span>on Mondays</div>
+  <div class="mini-box"><span>❌</span>never</div>
 </div>
-
 </details>
 
 <details open class="green">
-
 <summary>2. USES</summary>
 
 <div class="cards">
-
-<div class="card">
-<div class="icon-big">🪥</div>
-<h3>Habits</h3>
-<p>every morning</p>
+  <div class="card"><div class="icon-big">🪥</div><h3>Habits</h3><p>every morning</p></div>
+  <div class="card"><div class="icon-big">🌍</div><h3>Truths</h3><p>100°C</p></div>
+  <div class="card"><div class="icon-big">📖</div><h3>Facts</h3><p>tropical countries</p></div>
+  <div class="card"><div class="icon-big">🚌</div><h3>Schedules</h3><p>8 o’clock</p></div>
+  <div class="card"><div class="icon-big">❤️</div><h3>Feelings</h3><p>I love chocolate</p></div>
 </div>
+</details>
 
-<div class="card">
-<div class="icon-big">🌍</div>
-<h3>Truths</h3>
-<p>100°C</p>
+<details open class="purple">
+<summary>3. FORM</summary>
+
+<table>
+<tr>
+<th>Subject</th>
+<th>Affirmative</th>
+<th>Negative</th>
+<th>Question</th>
+</tr>
+
+<tr>
+<td>I / You / We / They</td>
+<td>I play.</td>
+<td>I don’t play.</td>
+<td>Do I play?</td>
+</tr>
+
+<tr>
+<td>He / She / It</td>
+<td>He plays.</td>
+<td>He doesn’t play.</td>
+<td>Does he play?</td>
+</tr>
+</table>
+</details>
+
+<details open class="orange">
+<summary>4. SPELLING RULES</summary>
+
+<div class="spelling-grid">
+  <div class="rule-card"><div class="emoji">⚽</div>play → plays</div>
+  <div class="rule-card"><div class="emoji">📺</div>watch → watches</div>
+  <div class="rule-card"><div class="emoji">📚</div>study → studies</div>
+  <div class="rule-card"><div class="emoji">😊</div>enjoy → enjoys</div>
 </div>
+</details>
 
-<div class="card">
-<div class="icon-big">📖</div>
-<h3>Facts</h3>
-<p>tropical countries</p>
-</div>
+<details open class="teal">
+<summary>5. ADVERBS OF FREQUENCY</summary>
 
-<div class="card">
-<div class="icon-big">🚌</div>
-<h3>Schedules</h3>
-<p>8 o’clock</p>
-</div>
+<div class="frequency-row"><div class="percent">100%</div><div class="bar always">always</div></div>
+<div class="frequency-row"><div class="percent">80%</div><div class="bar usually">usually</div></div>
+<div class="frequency-row"><div class="percent">60%</div><div class="bar often">often</div></div>
+<div class="frequency-row"><div class="percent">40%</div><div class="bar sometimes">sometimes</div></div>
+<div class="frequency-row"><div class="percent">20%</div><div class="bar rarely">rarely</div></div>
+<div class="frequency-row"><div class="percent">0%</div><div class="bar never">never</div></div>
+</details>
 
-<div class="card">
-<div class="icon-big">❤️</div>
-<h3>Feelings</h3>
-<p>I love chocolate</p>
-</div>
+<details open class="red">
+<summary>6. COMMON MISTAKES</summary>
 
-</div>
-
+<ul>
+<li>❌ He go to school. → ✅ He goes to school.</li>
+<li>❌ She don’t like coffee. → ✅ She doesn’t like coffee.</li>
+<li>❌ Do they goes? → ✅ Do they go?</li>
+</ul>
 </details>
 
 </section>
 
-<!-- TEST -->
-
 <section id="present-simple-test" class="lesson-hidden">
 
 <h2>📝 Present Simple Test</h2>
-
-<p>
-Choose the correct answer, then click Submit.
-</p>
+<p>Choose the correct answer, then click Submit.</p>
 
 <form id="quizForm">
+  <div id="quiz"></div>
 
-<div id="quiz"></div>
+  <button type="button" class="btn" onclick="checkQuiz()">Submit</button>
 
-<button type="button" class="btn" onclick="checkQuiz()">
-Submit
-</button>
-
-<button type="button" class="btn" onclick="resetQuiz()" style="background:#7b3fb5;">
-Reset
-</button>
-
+  <button type="button" class="btn" onclick="resetQuiz()" style="background:#7b3fb5;">
+    Reset
+  </button>
 </form>
 
 <div id="result" class="result-box"></div>
 
 </section>
 
-<!-- HANDOUTS -->
-
 <section id="handouts">
+  <h2>Handouts</h2>
 
-<h2>Handouts</h2>
-
-<div class="file-box">
-<strong>📄 Grammar Worksheet</strong>
-<a class="file-btn" href="#">Download</a>
-</div>
-
+  <div class="file-box">
+    <strong>📄 Grammar Worksheet</strong>
+    <a class="file-btn" href="#">Download</a>
+  </div>
 </section>
-
-<!-- VIDEOS -->
 
 <section id="videos">
+  <h2>Videos</h2>
 
-<h2>Videos</h2>
-
-<div class="file-box">
-<strong>▶️ Present Simple</strong>
-<a class="file-btn" href="#" style="background:#7b4ce0;">Watch</a>
-</div>
-
+  <div class="file-box">
+    <strong>▶️ Present Simple</strong>
+    <a class="file-btn" href="#" style="background:#7b4ce0;">Watch</a>
+  </div>
 </section>
-
-<!-- RESOURCES -->
 
 <section id="resources">
+  <h2>Resources</h2>
 
-<h2>Resources</h2>
-
-<div class="file-box">
-<strong>🎨 Infographics</strong>
-<a class="file-btn" href="#">Open</a>
-</div>
-
+  <div class="file-box">
+    <strong>🎨 Infographics</strong>
+    <a class="file-btn" href="#">Open</a>
+  </div>
 </section>
 
-<!-- CONTACT -->
-
 <section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: your-email@example.com</p>
-
+  <h2>Contact</h2>
+  <p>Email: your-email@example.com</p>
 </section>
 
 <footer>
-
-<p>
-© 2026 Mr. Metwally | English Teacher Website
-</p>
-
+  <p>© 2026 Mr. Metwally | English Teacher Website</p>
 </footer>
 
 <script>
-
-function toggleLesson(id){
-
-  const lesson = document.getElementById(id);
-
-  if(lesson.style.display === "block"){
-    lesson.style.display = "none";
-  } else {
-    lesson.style.display = "block";
-  }
-
+function toggleSection(id){
+  const section = document.getElementById(id);
+  section.classList.toggle("lesson-hidden");
 }
 
 const questions = [
-
-["Ahmed ______ to school every day.", ["go", "goes", "going"], "goes"],
-
-["We ______ football on Fridays.", ["plays", "play", "playing"], "play"],
-
-["She ______ coffee every morning.", ["drink", "drinks", "drinking"], "drinks"],
-
-["Water ______ at 100°C.", ["boil", "boils", "boiling"], "boils"],
-
-["The bus ______ at 7:00 a.m.", ["leave", "leaves", "leaving"], "leaves"]
-
+  ["Ahmed ______ to school every day.", ["go", "goes", "going"], "goes"],
+  ["We ______ football on Fridays.", ["plays", "play", "playing"], "play"],
+  ["She ______ coffee every morning.", ["drink", "drinks", "drinking"], "drinks"],
+  ["Water ______ at 100°C.", ["boil", "boils", "boiling"], "boils"],
+  ["The bus ______ at 7:00 a.m.", ["leave", "leaves", "leaving"], "leaves"],
+  ["They ______ lunch at school.", ["eat", "eats", "eating"], "eat"],
+  ["My father ______ TV at night.", ["watch", "watches", "watching"], "watches"],
+  ["I ______ up early every day.", ["wake", "wakes", "waking"], "wake"],
+  ["Sara ______ English on Mondays.", ["study", "studies", "studying"], "studies"],
+  ["He ______ basketball every weekend.", ["play", "plays", "playing"], "plays"],
+  ["She ______ meat.", ["don’t eat", "doesn’t eats", "doesn’t eat"], "doesn’t eat"],
+  ["They ______ coffee in the morning.", ["don’t drink", "doesn’t drink", "not drink"], "don’t drink"],
+  ["He ______ to work by bus.", ["doesn’t go", "don’t goes", "doesn’t goes"], "doesn’t go"],
+  ["We ______ fast food every day.", ["doesn’t eat", "don’t eat", "not eat"], "don’t eat"],
+  ["______ he play football?", ["Do", "Does", "Is"], "Does"],
+  ["______ they study English?", ["Does", "Are", "Do"], "Do"],
+  ["______ she like chocolate?", ["Does", "Do", "Is"], "Does"],
+  ["______ your friends live in Riyadh?", ["Do", "Does", "Are"], "Do"],
+  ["I ______ drink coffee in the morning.", ["always", "am always", "always am"], "always"],
+  ["She ______ late for class.", ["is usually", "usually is", "usually"], "is usually"],
+  ["They ______ go to the gym.", ["often", "are often", "often are"], "often"],
+  ["He is ______ tired after work.", ["never", "neverly", "not never"], "never"]
 ];
 
 function loadQuiz(){
-
-  let quiz = document.getElementById("quiz");
-
+  const quiz = document.getElementById("quiz");
   quiz.innerHTML = "";
 
   questions.forEach((q, index) => {
-
-    let questionHTML = `
+    let html = `
       <div class="quiz-question">
-      <p>${index + 1}. ${q[0]}</p>
+        <p>${index + 1}. ${q[0]}</p>
     `;
 
     q[1].forEach(option => {
-
-      questionHTML += `
-      <label>
-      <input type="radio" name="q${index}" value="${option}">
-      ${option}
-      </label>
+      html += `
+        <label>
+          <input type="radio" name="q${index}" value="${option}">
+          ${option}
+        </label>
       `;
-
     });
 
-    questionHTML += `</div>`;
-
-    quiz.innerHTML += questionHTML;
-
+    html += `</div>`;
+    quiz.innerHTML += html;
   });
-
 }
 
 function checkQuiz(){
-
   let score = 0;
 
   questions.forEach((q, index) => {
-
-    let answer = document.querySelector(
-      `input[name="q${index}"]:checked`
-    );
+    const answer = document.querySelector(`input[name="q${index}"]:checked`);
 
     if(answer && answer.value === q[2]){
       score++;
     }
-
   });
 
-  let result = document.getElementById("result");
-
+  const result = document.getElementById("result");
   result.style.display = "block";
+  result.innerHTML = `Your score: ${score} / ${questions.length}`;
 
-  result.innerHTML =
-  `Your score: ${score} / ${questions.length}`;
-
+  if(score >= 19){
+    result.innerHTML += "<br>Excellent! ⭐";
+  } else if(score >= 14){
+    result.innerHTML += "<br>Good job! 👍";
+  } else {
+    result.innerHTML += "<br>Try again. 📘";
+  }
 }
 
 function resetQuiz(){
-
   document.getElementById("quizForm").reset();
-
   document.getElementById("result").style.display = "none";
-
 }
 
 loadQuiz();
-
 </script>
 
 </body>
