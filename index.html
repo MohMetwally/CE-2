@@ -3,296 +3,293 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mr. Metwally | English Teacher</title>
+<title>Mr. Metwally | English Teacher</title>
 
-  <style>
+<style>
 
-    *{
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      background:#f7fbff;
-      color:#1f2a44;
-    }
+body{
+  font-family:Arial,sans-serif;
+  background:#f7fbff;
+  color:#1f2a44;
+}
 
-    /* HEADER */
+/* HEADER */
 
-    header{
-      background:white;
-      padding:15px 7%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 3px 15px rgba(0,0,0,0.08);
-    }
+header{
+  background:white;
+  padding:15px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 15px rgba(0,0,0,0.08);
+}
 
-    .logo h2{
-      margin:0;
-      color:#102a5e;
-    }
+.logo h1{
+  color:#102a5e;
+  font-size:28px;
+}
 
-    .logo p{
-      margin:0;
-      color:#2b7cff;
-      font-weight:bold;
-    }
+.logo p{
+  color:#2b7cff;
+  font-weight:bold;
+}
 
-    nav{
-      display:flex;
-      gap:18px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
+/* NAVBAR */
 
-    nav a{
-      text-decoration:none;
-      color:#1f2a44;
-      font-weight:bold;
-    }
+nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
 
-    nav a:hover{
-      color:#2b7cff;
-    }
+nav a{
+  text-decoration:none;
+  color:#1f2a44;
+  font-weight:bold;
+}
 
-    /* DROPDOWN */
+nav a:hover{
+  color:#2b7cff;
+}
 
-    .dropdown{
-      position:relative;
-      display:inline-block;
-      margin:10px;
-    }
+/* DROPDOWN */
 
-    .dropdown-content{
-      display:none;
-      position:absolute;
-      background:white;
-      min-width:230px;
-      border-radius:14px;
-      overflow:hidden;
-      box-shadow:0 8px 25px rgba(0,0,0,0.15);
-      z-index:100;
-    }
+.dropdown{
+  position:relative;
+}
 
-    .dropdown-content a{
-      display:block;
-      padding:14px;
-      color:#1f2a44;
-      text-decoration:none;
-    }
+.dropdown-content{
+  display:none;
+  position:absolute;
+  background:white;
+  min-width:240px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  z-index:100;
+}
 
-    .dropdown-content a:hover{
-      background:#eef6ff;
-    }
+.dropdown-content a{
+  display:block;
+  padding:14px;
+  text-decoration:none;
+  color:#1f2a44;
+}
 
-    .dropdown:hover .dropdown-content{
-      display:block;
-    }
+.dropdown-content a:hover{
+  background:#eef6ff;
+}
 
-    /* HERO */
+.dropdown:hover .dropdown-content{
+  display:block;
+}
 
-    .hero{
-      width:90%;
-      margin:35px auto;
-      padding:55px;
-      border-radius:25px;
-      background:linear-gradient(120deg,#c8fff4,#e8f2ff,#ffd6f1);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      box-shadow:0 10px 30px rgba(0,0,0,0.1);
-    }
+/* HERO */
 
-    .hero h1{
-      font-size:48px;
-      margin:0;
-      color:#102a5e;
-    }
+.hero{
+  width:90%;
+  margin:35px auto;
+  padding:60px;
+  border-radius:25px;
+  background:linear-gradient(120deg,#c8fff4,#e8f2ff,#ffd6f1);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
 
-    .hero span{
-      color:#008c89;
-    }
+.hero-text h2{
+  font-size:50px;
+  color:#102a5e;
+}
 
-    .hero p{
-      font-size:18px;
-      line-height:1.7;
-      max-width:550px;
-    }
+.hero-text span{
+  color:#008c89;
+}
 
-    .hero-img{
-      font-size:110px;
-    }
+.hero-text p{
+  margin-top:15px;
+  font-size:18px;
+  line-height:1.7;
+  max-width:550px;
+}
 
-    /* BUTTON */
+.hero-icon{
+  font-size:110px;
+}
 
-    .btn{
-      display:inline-block;
-      margin-top:15px;
-      background:#4f63d8;
-      color:white;
-      padding:13px 24px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:bold;
-    }
+/* BUTTON */
 
-    .btn:hover{
-      opacity:0.9;
-    }
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#4f63d8;
+  color:white;
+  padding:13px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    /* SECTIONS */
+.btn:hover{
+  opacity:0.9;
+}
 
-    section{
-      width:90%;
-      margin:35px auto;
-      background:white;
-      padding:30px;
-      border-radius:22px;
-      box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    }
+/* SECTIONS */
 
-    h2{
-      color:#006b5f;
-      font-size:32px;
-    }
+section{
+  width:90%;
+  margin:35px auto;
+  background:white;
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
 
-    /* FILES */
+section h2{
+  margin-bottom:20px;
+  color:#006b5f;
+}
 
-    .handout,
-    .video{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      background:#f8fbff;
-      margin:12px 0;
-      padding:16px 20px;
-      border-radius:14px;
-      border-left:6px solid #14a085;
-    }
+/* FILE BOX */
 
-    .video{
-      border-left-color:#7b4ce0;
-    }
+.file-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#f8fbff;
+  padding:15px 20px;
+  margin:12px 0;
+  border-radius:14px;
+  border-left:6px solid #14a085;
+}
 
-    .download{
-      text-decoration:none;
-      background:#14a085;
-      color:white;
-      padding:9px 16px;
-      border-radius:20px;
-      font-weight:bold;
-    }
+.file-btn{
+  background:#14a085;
+  color:white;
+  padding:10px 18px;
+  border-radius:20px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    .watch{
-      background:#7b4ce0;
-    }
+/* DETAILS */
 
-    /* INTERACTIVE GRAMMAR */
+details{
+  background:#f8fbff;
+  padding:18px;
+  margin:15px 0;
+  border-radius:16px;
+  border-left:6px solid #2b7cff;
+}
 
-    details{
-      background:#f8fbff;
-      margin:15px 0;
-      padding:18px;
-      border-radius:16px;
-      border-left:6px solid #2b7cff;
-      box-shadow:0 3px 12px rgba(0,0,0,0.08);
-    }
+summary{
+  font-size:22px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-    summary{
-      font-size:22px;
-      font-weight:bold;
-      cursor:pointer;
-      color:#102a5e;
-    }
+/* CARDS */
 
-    table{
-      width:100%;
-      border-collapse:collapse;
-      margin-top:15px;
-    }
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
 
-    th{
-      background:#2b7cff;
-      color:white;
-    }
+.card{
+  background:white;
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
 
-    td, th{
-      border:1px solid #ddd;
-      padding:12px;
-      text-align:center;
-    }
+/* TABLE */
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-      gap:15px;
-      margin-top:20px;
-    }
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:15px;
+}
 
-    .card{
-      background:white;
-      padding:20px;
-      border-radius:18px;
-      text-align:center;
-      box-shadow:0 3px 12px rgba(0,0,0,0.08);
-    }
+th{
+  background:#2b7cff;
+  color:white;
+}
 
-    .frequency div{
-      background:#eef6ff;
-      margin:8px 0;
-      padding:12px;
-      border-radius:12px;
-      font-weight:bold;
-    }
+td,th{
+  border:1px solid #ddd;
+  padding:12px;
+  text-align:center;
+}
 
-    footer{
-      background:#102a5e;
-      color:white;
-      text-align:center;
-      padding:25px;
-      margin-top:40px;
-    }
+/* FREQUENCY */
 
-    /* MOBILE */
+.frequency div{
+  background:#eef6ff;
+  margin:8px 0;
+  padding:12px;
+  border-radius:12px;
+  font-weight:bold;
+}
 
-    @media (max-width:768px){
+/* FOOTER */
 
-      header{
-        flex-direction:column;
-      }
+footer{
+  background:#102a5e;
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:40px;
+}
 
-      nav{
-        justify-content:center;
-        margin-top:15px;
-      }
+/* MOBILE */
 
-      .hero{
-        flex-direction:column;
-        text-align:center;
-        padding:35px 20px;
-      }
+@media(max-width:768px){
 
-      .hero h1{
-        font-size:35px;
-      }
+header{
+  flex-direction:column;
+}
 
-      .hero-img{
-        margin-top:20px;
-        font-size:80px;
-      }
+nav{
+  justify-content:center;
+  margin-top:15px;
+}
 
-    }
+.hero{
+  flex-direction:column;
+  text-align:center;
+  padding:35px 20px;
+}
 
-  </style>
+.hero-text h2{
+  font-size:35px;
+}
+
+.hero-icon{
+  margin-top:20px;
+  font-size:80px;
+}
+
+}
+
+</style>
 
 </head>
 
@@ -302,37 +299,37 @@
 
 <header>
 
-  <div class="logo">
-    <h2>📖 Mr. Metwally</h2>
-    <p>English Teacher</p>
-  </div>
+<div class="logo">
+  <h1>📖 Mr. Metwally</h1>
+  <p>English Teacher</p>
+</div>
 
-  <nav>
+<nav>
 
-    <a href="#about">About</a>
+<a href="#about">About</a>
 
-    <!-- LEVELS -->
+<!-- LEVELS -->
 
-    <div class="dropdown">
+<div class="dropdown">
 
-      <a href="#">Levels ▾</a>
+<a href="#">Levels ▾</a>
 
-      <div class="dropdown-content">
+<div class="dropdown-content">
 
-        <a href="#level2">Level 2</a>
-        <a href="#level3">Level 3</a>
-        <a href="#level4">Level 4</a>
+<a href="#level2">Level 2</a>
+<a href="#level3">Level 3</a>
+<a href="#level4">Level 4</a>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-    <a href="#handouts">Handouts</a>
-    <a href="#videos">Videos</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Contact</a>
+<a href="#handouts">Handouts</a>
+<a href="#videos">Videos</a>
+<a href="#resources">Resources</a>
+<a href="#contact">Contact</a>
 
-  </nav>
+</nav>
 
 </header>
 
@@ -340,27 +337,26 @@
 
 <div class="hero">
 
-  <div>
+<div class="hero-text">
 
-    <h1>
-      Welcome! <br>
-      <span>I’m Mr. Metwally</span>
-    </h1>
+<h2>
+Welcome! <br>
+<span>I’m Mr. Metwally</span>
+</h2>
 
-    <p>
-      English lessons, videos, handouts and learning resources
-      organised by level and skill.
-    </p>
+<p>
+English lessons, videos, handouts and learning resources organised by level and skill.
+</p>
 
-    <a class="btn" href="#level2">
-      ⭐ Start Learning
-    </a>
+<a class="btn" href="#level2">
+⭐ Start Learning
+</a>
 
-  </div>
+</div>
 
-  <div class="hero-img">
-    📚✏️
-  </div>
+<div class="hero-icon">
+📚✏️
+</div>
 
 </div>
 
@@ -368,14 +364,13 @@
 
 <section id="about">
 
-  <h2>About</h2>
+<h2>About</h2>
 
-  <p>
-    Welcome to my English learning website.
-    Here students can access lessons, handouts,
-    videos, classroom activities and learning resources
-    organised by level and skill.
-  </p>
+<p>
+Welcome to my English learning website.
+Here students can access lessons, handouts,
+videos, classroom activities and learning resources organised by level and skill.
+</p>
 
 </section>
 
@@ -383,31 +378,63 @@
 
 <section id="level2">
 
-  <h2>Level 2</h2>
+<h2>Level 2</h2>
 
-  <div class="dropdown">
+<div class="dropdown">
 
-    <a class="btn" href="#">
-      ✏️ Grammar ▾
-    </a>
+<a class="btn" href="#">
+✏️ Grammar ▾
+</a>
 
-    <div class="dropdown-content">
+<div class="dropdown-content">
 
-      <a href="#present-simple">
-        Present Simple
-      </a>
+<a href="#present-simple">
+Present Simple
+</a>
 
-      <a href="#">
-        Past Simple
-      </a>
+<a href="#">
+Past Simple
+</a>
 
-      <a href="#">
-        Present Perfect
-      </a>
+<a href="#">
+Present Perfect
+</a>
 
-    </div>
+</div>
 
-  </div>
+</div>
+
+<div class="dropdown">
+
+<a class="btn" href="#" style="background:#14a085;">
+📘 Reading ▾
+</a>
+
+<div class="dropdown-content">
+
+<a href="#">Unit 1</a>
+<a href="#">Unit 2</a>
+<a href="#">Unit 3</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<a class="btn" href="#" style="background:#ff7a1a;">
+🎧 Listening ▾
+</a>
+
+<div class="dropdown-content">
+
+<a href="#">Audio 1</a>
+<a href="#">Audio 2</a>
+<a href="#">Audio 3</a>
+
+</div>
+
+</div>
 
 </section>
 
@@ -415,218 +442,210 @@
 
 <section id="present-simple">
 
-  <h2>Present Simple</h2>
+<h2>Present Simple</h2>
 
-  <p>
-    Use it. Understand it. Master it.
-  </p>
+<p>
+Use it. Understand it. Master it.
+</p>
 
-  <details open>
+<details open>
 
-    <summary>
-      1. What is it?
-    </summary>
+<summary>
+1. What is it?
+</summary>
 
-    <p>
-      The Present Simple is used to talk about actions
-      that are regular, true, or always happen.
-    </p>
+<p>
+The Present Simple is used to talk about actions that are regular,
+true, or always happen.
+</p>
 
-    <strong>Keywords:</strong>
+<strong>Keywords:</strong>
 
-    <p>
-      always, usually, often, sometimes,
-      rarely, never, every day, on Mondays.
-    </p>
+<p>
+always, usually, often, sometimes,
+rarely, never, every day, on Mondays.
+</p>
 
-  </details>
+</details>
 
-  <details>
+<details>
 
-    <summary>
-      2. Uses
-    </summary>
+<summary>
+2. Uses
+</summary>
 
-    <div class="cards">
+<div class="cards">
 
-      <div class="card">
-        🪥
-        <h3>Habits</h3>
-        <p>I brush my teeth every morning.</p>
-      </div>
+<div class="card">
+🪥
+<h3>Habits</h3>
+<p>I brush my teeth every morning.</p>
+</div>
 
-      <div class="card">
-        🌍
-        <h3>Truths</h3>
-        <p>Water boils at 100°C.</p>
-      </div>
+<div class="card">
+🌍
+<h3>Truths</h3>
+<p>Water boils at 100°C.</p>
+</div>
 
-      <div class="card">
-        📖
-        <h3>Facts</h3>
-        <p>Bananas grow in tropical countries.</p>
-      </div>
+<div class="card">
+📖
+<h3>Facts</h3>
+<p>Bananas grow in tropical countries.</p>
+</div>
 
-      <div class="card">
-        🚌
-        <h3>Schedules</h3>
-        <p>The bus leaves at 8 o’clock.</p>
-      </div>
+<div class="card">
+🚌
+<h3>Schedules</h3>
+<p>The bus leaves at 8 o’clock.</p>
+</div>
 
-      <div class="card">
-        ❤️
-        <h3>Feelings</h3>
-        <p>I love chocolate.</p>
-      </div>
+<div class="card">
+❤️
+<h3>Feelings</h3>
+<p>I love chocolate.</p>
+</div>
 
-    </div>
+</div>
 
-  </details>
+</details>
 
-  <details>
+<details>
 
-    <summary>
-      3. Form
-    </summary>
+<summary>
+3. Form
+</summary>
 
-    <table>
+<table>
 
-      <tr>
-        <th>Subject</th>
-        <th>Affirmative</th>
-        <th>Negative</th>
-        <th>Question</th>
-      </tr>
+<tr>
+<th>Subject</th>
+<th>Affirmative</th>
+<th>Negative</th>
+<th>Question</th>
+</tr>
 
-      <tr>
-        <td>I / You / We / They</td>
-        <td>I play football.</td>
-        <td>I don’t play football.</td>
-        <td>Do I play football?</td>
-      </tr>
+<tr>
+<td>I / You / We / They</td>
+<td>I play football.</td>
+<td>I don’t play football.</td>
+<td>Do I play football?</td>
+</tr>
 
-      <tr>
-        <td>He / She / It</td>
-        <td>He plays football.</td>
-        <td>He doesn’t play football.</td>
-        <td>Does he play football?</td>
-      </tr>
+<tr>
+<td>He / She / It</td>
+<td>He plays football.</td>
+<td>He doesn’t play football.</td>
+<td>Does he play football?</td>
+</tr>
 
-    </table>
+</table>
 
-  </details>
+</details>
 
-  <details>
+<details>
 
-    <summary>
-      4. Spelling Rules
-    </summary>
+<summary>
+4. Spelling Rules
+</summary>
 
-    <ul>
+<ul>
 
-      <li>
-        Most verbs → add -s:
-        play → plays
-      </li>
+<li>Most verbs → add -s: play → plays</li>
 
-      <li>
-        Verbs ending in -s, -sh, -ch, -x, -o
-        → add -es:
-        watch → watches
-      </li>
+<li>
+Verbs ending in -s, -sh, -ch, -x, -o
+→ add -es: watch → watches
+</li>
 
-      <li>
-        Consonant + y
-        → y changes to i + es:
-        study → studies
-      </li>
+<li>
+Consonant + y
+→ y changes to i + es:
+study → studies
+</li>
 
-      <li>
-        Vowel + y
-        → add -s:
-        enjoy → enjoys
-      </li>
+<li>
+Vowel + y
+→ add -s:
+enjoy → enjoys
+</li>
 
-    </ul>
+</ul>
 
-  </details>
+</details>
 
-  <details>
+<details>
 
-    <summary>
-      5. Adverbs of Frequency
-    </summary>
+<summary>
+5. Adverbs of Frequency
+</summary>
 
-    <div class="frequency">
+<div class="frequency">
 
-      <div>100% always</div>
-      <div>80% usually</div>
-      <div>60% often</div>
-      <div>40% sometimes</div>
-      <div>20% rarely</div>
-      <div>0% never</div>
+<div>100% always</div>
+<div>80% usually</div>
+<div>60% often</div>
+<div>40% sometimes</div>
+<div>20% rarely</div>
+<div>0% never</div>
 
-    </div>
+</div>
 
-    <p>
-      They usually come before the main verb.
-    </p>
+<p>
+They usually come before the main verb.
+</p>
 
-    <p>
-      Example:
-      I always wake up early.
-    </p>
+<p>
+Example:
+I always wake up early.
+</p>
 
-  </details>
+</details>
 
-  <details>
+<details>
 
-    <summary>
-      6. Time Expressions
-    </summary>
+<summary>
+6. Time Expressions
+</summary>
 
-    <ul>
+<ul>
 
-      <li>every day / week / month / year</li>
+<li>every day / week / month / year</li>
+<li>once a week / twice a month</li>
+<li>on Mondays</li>
+<li>in the morning / evening</li>
+<li>at night / at the weekend</li>
 
-      <li>once a week / twice a month</li>
+</ul>
 
-      <li>on Mondays</li>
+</details>
 
-      <li>in the morning / evening</li>
+<details>
 
-      <li>at night / at the weekend</li>
+<summary>
+7. Common Mistakes
+</summary>
 
-    </ul>
+<ul>
 
-  </details>
+<li>
+❌ He go to school.
+→ ✅ He goes to school.
+</li>
 
-  <details>
+<li>
+❌ She don’t like coffee.
+→ ✅ She doesn’t like coffee.
+</li>
 
-    <summary>
-      7. Common Mistakes
-    </summary>
+<li>
+❌ Do they goes?
+→ ✅ Do they go?
+</li>
 
-    <ul>
+</ul>
 
-      <li>
-        ❌ He go to school.
-        → ✅ He goes to school.
-      </li>
-
-      <li>
-        ❌ She don’t like coffee.
-        → ✅ She doesn’t like coffee.
-      </li>
-
-      <li>
-        ❌ Do they goes?
-        → ✅ Do they go?
-      </li>
-
-    </ul>
-
-  </details>
+</details>
 
 </section>
 
@@ -634,21 +653,31 @@
 
 <section id="handouts">
 
-  <h2>Handouts</h2>
+<h2>Handouts</h2>
 
-  <div class="handout">
-    <strong>📄 Grammar Worksheet</strong>
-    <a class="download" href="#">
-      Download
-    </a>
-  </div>
+<div class="file-box">
 
-  <div class="handout">
-    <strong>📄 Vocabulary List</strong>
-    <a class="download" href="#">
-      Download
-    </a>
-  </div>
+<strong>
+📄 Grammar Worksheet
+</strong>
+
+<a class="file-btn" href="#">
+Download
+</a>
+
+</div>
+
+<div class="file-box">
+
+<strong>
+📄 Vocabulary List
+</strong>
+
+<a class="file-btn" href="#">
+Download
+</a>
+
+</div>
 
 </section>
 
@@ -656,19 +685,19 @@
 
 <section id="videos">
 
-  <h2>Videos</h2>
+<h2>Videos</h2>
 
-  <div class="video">
+<div class="file-box">
 
-    <strong>
-      ▶️ Present Simple
-    </strong>
+<strong>
+▶️ Present Simple
+</strong>
 
-    <a class="download watch" href="#">
-      Watch
-    </a>
+<a class="file-btn" href="#" style="background:#7b4ce0;">
+Watch
+</a>
 
-  </div>
+</div>
 
 </section>
 
@@ -676,19 +705,19 @@
 
 <section id="resources">
 
-  <h2>Resources</h2>
+<h2>Resources</h2>
 
-  <div class="handout">
+<div class="file-box">
 
-    <strong>
-      🎨 Infographics
-    </strong>
+<strong>
+🎨 Infographics
+</strong>
 
-    <a class="download" href="#">
-      Open
-    </a>
+<a class="file-btn" href="#">
+Open
+</a>
 
-  </div>
+</div>
 
 </section>
 
@@ -696,11 +725,11 @@
 
 <section id="contact">
 
-  <h2>Contact</h2>
+<h2>Contact</h2>
 
-  <p>
-    Email: your-email@example.com
-  </p>
+<p>
+Email: your-email@example.com
+</p>
 
 </section>
 
@@ -708,9 +737,9 @@
 
 <footer>
 
-  <p>
-    © 2026 Mr. Metwally | English Teacher Website
-  </p>
+<p>
+© 2026 Mr. Metwally | English Teacher Website
+</p>
 
 </footer>
 
