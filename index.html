@@ -1,16 +1,189 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>CE-2</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr. Metwally | Teacher Website</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #003366, #0077cc);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #003366;
+      margin: 10px;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #eef6ff;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #dceeff;
+    }
+
+    .button {
+      display: inline-block;
+      background: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Welcome!</h1>
+<header>
+  <h1>Mr. Metwally</h1>
+  <p>English Teacher | Lessons | Tests | Resources</p>
+</header>
 
-<p>This is my first GitHub website.</p>
+<nav>
+  <a href="#about">About</a>
+  <a href="#lessons">Lessons</a>
+  <a href="#tests">Tests</a>
+  <a href="#resources">Resources</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Welcome to my teaching website. Here you can find English lessons,
+    worksheets, tests, infographics, and useful learning materials.
+  </p>
+</section>
+
+<section id="lessons">
+  <h2>Lessons</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Grammar</h3>
+      <p>Present Simple, Past Simple, Present Perfect and more.</p>
+      <a class="button" href="#">Open</a>
+    </div>
+
+    <div class="card">
+      <h3>Vocabulary</h3>
+      <p>Useful words for A1, A2 and technical English students.</p>
+      <a class="button" href="#">Open</a>
+    </div>
+
+    <div class="card">
+      <h3>Speaking</h3>
+      <p>Speaking cards, questions, and classroom activities.</p>
+      <a class="button" href="#">Open</a>
+    </div>
+  </div>
+</section>
+
+<section id="tests">
+  <h2>Tests & PDFs</h2>
+  <p>You can upload your PDF tests to GitHub and link them here.</p>
+
+  <a class="button" href="#">Download Test 1</a>
+  <a class="button" href="#">Download Worksheet</a>
+</section>
+
+<section id="resources">
+  <h2>Infographics</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Present Simple</h3>
+      <p>Rules, spelling notes, and examples.</p>
+    </div>
+
+    <div class="card">
+      <h3>Past Simple</h3>
+      <p>was / were, regular verbs, and questions.</p>
+    </div>
+
+    <div class="card">
+      <h3>Present Perfect</h3>
+      <p>have / has + past participle.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: your-email@example.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Mr. Metwally | English Teacher Website</p>
+</footer>
 
 </body>
-
 </html>
