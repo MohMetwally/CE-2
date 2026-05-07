@@ -387,11 +387,11 @@ footer{
   <h2>Level 2</h2>
 
   <button class="btn" onclick="toggleSection('present-simple')">
-    ✏️ Grammar: Present Simple
+    ✏️ Open / Close Present Simple Lesson
   </button>
 
   <button class="btn" onclick="toggleSection('present-simple-test')" style="background:#d62828;">
-    📝 Present Simple Test
+    📝 Open / Close Present Simple Quiz
   </button>
 
   <a class="btn" href="#" style="background:#14a085;">📘 Reading</a>
@@ -498,7 +498,7 @@ true or always happen.
 
 <section id="present-simple-test" class="lesson-hidden">
 
-<h2>📝 Present Simple Test</h2>
+<h2>📝 Present Simple Quiz</h2>
 <p>Choose the correct answer, then click Submit.</p>
 
 <form id="quizForm">
@@ -568,14 +568,17 @@ const questions = [
   ["I ______ up early every day.", ["wake", "wakes", "waking"], "wake"],
   ["Sara ______ English on Mondays.", ["study", "studies", "studying"], "studies"],
   ["He ______ basketball every weekend.", ["play", "plays", "playing"], "plays"],
+
   ["She ______ meat.", ["don’t eat", "doesn’t eats", "doesn’t eat"], "doesn’t eat"],
   ["They ______ coffee in the morning.", ["don’t drink", "doesn’t drink", "not drink"], "don’t drink"],
   ["He ______ to work by bus.", ["doesn’t go", "don’t goes", "doesn’t goes"], "doesn’t go"],
   ["We ______ fast food every day.", ["doesn’t eat", "don’t eat", "not eat"], "don’t eat"],
+
   ["______ he play football?", ["Do", "Does", "Is"], "Does"],
   ["______ they study English?", ["Does", "Are", "Do"], "Do"],
   ["______ she like chocolate?", ["Does", "Do", "Is"], "Does"],
   ["______ your friends live in Riyadh?", ["Do", "Does", "Are"], "Do"],
+
   ["I ______ drink coffee in the morning.", ["always", "am always", "always am"], "always"],
   ["She ______ late for class.", ["is usually", "usually is", "usually"], "is usually"],
   ["They ______ go to the gym.", ["often", "are often", "often are"], "often"],
@@ -635,7 +638,7 @@ function resetQuiz(){
   document.getElementById("result").style.display = "none";
 }
 
-loadQuiz();
+document.addEventListener("DOMContentLoaded", loadQuiz);
 </script>
 
 </body>
