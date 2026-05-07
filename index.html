@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -24,8 +23,6 @@ body{
   color:#0f2448;
   font-size:22px;
 }
-
-/* HEADER */
 
 header{
   background:white;
@@ -62,34 +59,6 @@ nav a{
   font-weight:bold;
 }
 
-/* DROPDOWN */
-
-.dropdown{
-  position:relative;
-}
-
-.dropdown-content{
-  display:none;
-  position:absolute;
-  background:white;
-  min-width:230px;
-  border:3px solid #0f2448;
-  border-radius:15px;
-  box-shadow:5px 5px 0 #0f2448;
-  z-index:100;
-}
-
-.dropdown-content a{
-  display:block;
-  padding:13px;
-}
-
-.dropdown:hover .dropdown-content{
-  display:block;
-}
-
-/* HERO */
-
 .hero{
   width:92%;
   margin:35px auto;
@@ -101,18 +70,11 @@ nav a{
   text-align:center;
 }
 
-.hero-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-}
-
 .hero h2{
-  font-size:78px;
-  letter-spacing:3px;
+  font-size:70px;
   color:#08265c;
   background:#dff3ff;
+  display:inline-block;
   padding:10px 25px;
   border-radius:20px;
 }
@@ -121,17 +83,15 @@ nav a{
   background:#08265c;
   color:white;
   display:inline-block;
-  padding:10px 35px;
+  padding:10px 30px;
   border-radius:25px;
   margin-top:12px;
-  font-size:32px;
+  font-size:30px;
 }
 
 .illustration{
-  font-size:90px;
+  font-size:80px;
 }
-
-/* SECTIONS */
 
 section{
   width:92%;
@@ -149,8 +109,6 @@ h2{
   color:#08265c;
 }
 
-/* BUTTON */
-
 .btn{
   display:inline-block;
   margin:10px;
@@ -166,17 +124,9 @@ h2{
   cursor:pointer;
 }
 
-/* LESSON SHOW / HIDE */
-
 .lesson-hidden{
   display:none;
 }
-
-.lesson-show{
-  display:block;
-}
-
-/* DETAILS */
 
 details{
   margin:22px 0;
@@ -204,8 +154,6 @@ summary{
 .teal summary{background:#008c89;}
 .red summary{background:#d62828;}
 
-/* CARDS */
-
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -224,15 +172,7 @@ summary{
 
 .icon-big{
   font-size:65px;
-  margin-bottom:10px;
 }
-
-.card h3{
-  font-size:30px;
-  margin-bottom:10px;
-}
-
-/* MINI ICONS */
 
 .mini-icons{
   display:flex;
@@ -253,35 +193,25 @@ summary{
 .mini-box span{
   display:block;
   font-size:40px;
-  margin-bottom:6px;
 }
-
-/* TABLE */
 
 table{
   width:100%;
   border-collapse:collapse;
   margin-top:18px;
-  font-size:22px;
 }
 
 th{
   color:white;
   padding:12px;
+  background:#2b83c6;
 }
-
-th:nth-child(1){background:#7b3fb5;}
-th:nth-child(2){background:#53a653;}
-th:nth-child(3){background:#ef5f6c;}
-th:nth-child(4){background:#2b83c6;}
 
 td{
   border:2px solid #9aa7c2;
   padding:14px;
   text-align:center;
 }
-
-/* SPELLING */
 
 .spelling-grid{
   display:grid;
@@ -300,10 +230,7 @@ td{
 
 .rule-card .emoji{
   font-size:45px;
-  margin-bottom:10px;
 }
-
-/* FREQUENCY */
 
 .frequency-row{
   display:flex;
@@ -332,8 +259,6 @@ td{
 .rarely{background:#38bdf8;}
 .never{background:#8b5cf6;}
 
-/* FILES */
-
 .file-box{
   display:flex;
   justify-content:space-between;
@@ -353,8 +278,6 @@ td{
   text-decoration:none;
 }
 
-/* FOOTER */
-
 footer{
   background:#08265c;
   color:white;
@@ -362,8 +285,6 @@ footer{
   padding:25px;
   margin-top:40px;
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
 
@@ -378,140 +299,61 @@ nav{
 }
 
 .hero h2{
-  font-size:45px;
+  font-size:42px;
 }
 
 table{
-  font-size:18px;
+  font-size:17px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
+  <div class="logo">
+    <h1>📖 Mr. Metwally</h1>
+    <p>English Teacher</p>
+  </div>
 
-<div class="logo">
-  <h1>📖 Mr. Metwally</h1>
-  <p>English Teacher</p>
-</div>
-
-<nav>
-
-<a href="#about">About</a>
-
-<div class="dropdown">
-
-<a href="#">Levels ▾</a>
-
-<div class="dropdown-content">
-  <a href="#level2">Level 2</a>
-  <a href="#level3">Level 3</a>
-  <a href="#level4">Level 4</a>
-</div>
-
-</div>
-
-<a href="#handouts">Handouts</a>
-<a href="#videos">Videos</a>
-<a href="#resources">Resources</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
+  <nav>
+    <a href="#about">About</a>
+    <a href="#level2">Level 2</a>
+    <a href="#handouts">Handouts</a>
+    <a href="#videos">Videos</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <div class="hero">
-
-<div class="hero-top">
-
-<div class="illustration">🗓️⏰</div>
-
-<div>
+  <div class="illustration">🗓️⏰ 💡</div>
   <h2>PRESENT SIMPLE</h2>
-  <div class="tagline">
-    Use it. Understand it. Master it.
-  </div>
-</div>
-
-<div class="illustration">💡</div>
-
-</div>
-
+  <br>
+  <div class="tagline">Use it. Understand it. Master it.</div>
 </div>
 
 <section id="about">
-
-<h2>About</h2>
-
-<p>
-Welcome to my English learning website.
-Here students can access lessons, handouts,
-videos, classroom activities and learning resources organised by level and skill.
-</p>
-
+  <h2>About</h2>
+  <p>
+    Welcome to my English learning website.
+    Here students can access lessons, handouts,
+    videos, classroom activities and learning resources organised by level and skill.
+  </p>
 </section>
 
 <section id="level2">
+  <h2>Level 2</h2>
 
-<h2>Level 2</h2>
+  <button class="btn" onclick="toggleLesson('present-simple')">
+    ✏️ Grammar: Present Simple
+  </button>
 
-<div class="dropdown">
-
-<button class="btn">
-✏️ Grammar ▾
-</button>
-
-<div class="dropdown-content">
-
-<a href="javascript:void(0)" onclick="toggleLesson('present-simple')">
-Present Simple
-</a>
-
-<a href="javascript:void(0)">
-Past Simple
-</a>
-
-<a href="javascript:void(0)">
-Present Perfect
-</a>
-
-</div>
-
-</div>
-
-<div class="dropdown">
-
-<a class="btn" href="#" style="background:#14a085;">
-📘 Reading ▾
-</a>
-
-<div class="dropdown-content">
-  <a href="#">Unit 1</a>
-  <a href="#">Unit 2</a>
-  <a href="#">Unit 3</a>
-</div>
-
-</div>
-
-<div class="dropdown">
-
-<a class="btn" href="#" style="background:#ff7a1a;">
-🎧 Listening ▾
-</a>
-
-<div class="dropdown-content">
-  <a href="#">Audio 1</a>
-  <a href="#">Audio 2</a>
-  <a href="#">Audio 3</a>
-</div>
-
-</div>
-
+  <a class="btn" href="#" style="background:#14a085;">📘 Reading</a>
+  <a class="btn" href="#" style="background:#ff7a1a;">🎧 Listening</a>
 </section>
 
 <section id="present-simple" class="lesson-hidden">
@@ -523,10 +365,7 @@ Truths, habits, routines, facts and fixed situations
 </div>
 
 <details open>
-
-<summary>
-1. WHAT IS IT?
-</summary>
+<summary>1. WHAT IS IT?</summary>
 
 <p>
 The Present Simple is used to talk about actions that are regular,
@@ -534,325 +373,170 @@ true or always happen.
 </p>
 
 <div class="mini-icons">
-
-<div class="mini-box">
-<span>📅</span>
-every day
+  <div class="mini-box"><span>📅</span>every day</div>
+  <div class="mini-box"><span>🕒</span>usually</div>
+  <div class="mini-box"><span>🔁</span>often</div>
+  <div class="mini-box"><span>📌</span>on Mondays</div>
+  <div class="mini-box"><span>❌</span>never</div>
 </div>
-
-<div class="mini-box">
-<span>🕒</span>
-usually
-</div>
-
-<div class="mini-box">
-<span>🔁</span>
-often
-</div>
-
-<div class="mini-box">
-<span>📌</span>
-on Mondays
-</div>
-
-<div class="mini-box">
-<span>❌</span>
-never
-</div>
-
-</div>
-
 </details>
 
 <details open class="green">
-
-<summary>
-2. USES
-</summary>
+<summary>2. USES</summary>
 
 <div class="cards">
+  <div class="card">
+    <div class="icon-big">🪥</div>
+    <h3>Habits</h3>
+    <p>every morning</p>
+  </div>
 
-<div class="card">
-<div class="icon-big">🪥</div>
-<h3>Habits</h3>
-<p>every morning</p>
+  <div class="card">
+    <div class="icon-big">🌍</div>
+    <h3>Truths</h3>
+    <p>100°C</p>
+  </div>
+
+  <div class="card">
+    <div class="icon-big">📖</div>
+    <h3>Facts</h3>
+    <p>tropical countries</p>
+  </div>
+
+  <div class="card">
+    <div class="icon-big">🚌</div>
+    <h3>Schedules</h3>
+    <p>8 o’clock</p>
+  </div>
+
+  <div class="card">
+    <div class="icon-big">❤️</div>
+    <h3>Feelings</h3>
+    <p>I love chocolate</p>
+  </div>
 </div>
-
-<div class="card">
-<div class="icon-big">🌍</div>
-<h3>Truths</h3>
-<p>100°C</p>
-</div>
-
-<div class="card">
-<div class="icon-big">📖</div>
-<h3>Facts</h3>
-<p>tropical countries</p>
-</div>
-
-<div class="card">
-<div class="icon-big">🚌</div>
-<h3>Schedules</h3>
-<p>8 o’clock</p>
-</div>
-
-<div class="card">
-<div class="icon-big">❤️</div>
-<h3>Feelings</h3>
-<p>I love chocolate</p>
-</div>
-
-</div>
-
 </details>
 
 <details open class="purple">
-
-<summary>
-3. FORM
-</summary>
+<summary>3. FORM</summary>
 
 <table>
-
 <tr>
 <th>Subject</th>
-<th>Affirmative (+)</th>
-<th>Negative (-)</th>
-<th>Question (?)</th>
+<th>Affirmative</th>
+<th>Negative</th>
+<th>Question</th>
 </tr>
 
 <tr>
 <td>I / You / We / They</td>
-<td>I play football.</td>
-<td>I don’t play football.</td>
-<td>Do I play football?</td>
+<td>I play.</td>
+<td>I don’t play.</td>
+<td>Do I play?</td>
 </tr>
 
 <tr>
 <td>He / She / It</td>
-<td>He plays football.</td>
-<td>He doesn’t play football.</td>
-<td>Does he play football?</td>
+<td>He plays.</td>
+<td>He doesn’t play.</td>
+<td>Does he play?</td>
 </tr>
-
 </table>
-
 </details>
 
 <details open class="orange">
-
-<summary>
-4. SPELLING RULES
-</summary>
+<summary>4. SPELLING RULES</summary>
 
 <div class="spelling-grid">
-
-<div class="rule-card">
-<div class="emoji">⚽</div>
-play → plays
+  <div class="rule-card"><div class="emoji">⚽</div>play → plays</div>
+  <div class="rule-card"><div class="emoji">📺</div>watch → watches</div>
+  <div class="rule-card"><div class="emoji">📚</div>study → studies</div>
+  <div class="rule-card"><div class="emoji">😊</div>enjoy → enjoys</div>
 </div>
-
-<div class="rule-card">
-<div class="emoji">📺</div>
-watch → watches
-</div>
-
-<div class="rule-card">
-<div class="emoji">📚</div>
-study → studies
-</div>
-
-<div class="rule-card">
-<div class="emoji">😊</div>
-enjoy → enjoys
-</div>
-
-</div>
-
 </details>
 
 <details open class="teal">
+<summary>5. ADVERBS OF FREQUENCY</summary>
 
-<summary>
-5. ADVERBS OF FREQUENCY
-</summary>
-
-<div class="frequency-row">
-<div class="percent">100%</div>
-<div class="bar always">always</div>
-</div>
-
-<div class="frequency-row">
-<div class="percent">80%</div>
-<div class="bar usually">usually</div>
-</div>
-
-<div class="frequency-row">
-<div class="percent">60%</div>
-<div class="bar often">often</div>
-</div>
-
-<div class="frequency-row">
-<div class="percent">40%</div>
-<div class="bar sometimes">sometimes</div>
-</div>
-
-<div class="frequency-row">
-<div class="percent">20%</div>
-<div class="bar rarely">rarely</div>
-</div>
-
-<div class="frequency-row">
-<div class="percent">0%</div>
-<div class="bar never">never</div>
-</div>
+<div class="frequency-row"><div class="percent">100%</div><div class="bar always">always</div></div>
+<div class="frequency-row"><div class="percent">80%</div><div class="bar usually">usually</div></div>
+<div class="frequency-row"><div class="percent">60%</div><div class="bar often">often</div></div>
+<div class="frequency-row"><div class="percent">40%</div><div class="bar sometimes">sometimes</div></div>
+<div class="frequency-row"><div class="percent">20%</div><div class="bar rarely">rarely</div></div>
+<div class="frequency-row"><div class="percent">0%</div><div class="bar never">never</div></div>
 
 </details>
 
 <details open>
-
-<summary>
-6. TIME EXPRESSIONS
-</summary>
+<summary>6. TIME EXPRESSIONS</summary>
 
 <div class="mini-icons">
-
-<div class="mini-box">
-<span>📅</span>
-every day
+  <div class="mini-box"><span>📅</span>every day</div>
+  <div class="mini-box"><span>🕒</span>once a week</div>
+  <div class="mini-box"><span>🌞</span>morning</div>
+  <div class="mini-box"><span>🌙</span>night</div>
+  <div class="mini-box"><span>📌</span>Mondays</div>
 </div>
-
-<div class="mini-box">
-<span>🕒</span>
-once a week
-</div>
-
-<div class="mini-box">
-<span>🌞</span>
-morning
-</div>
-
-<div class="mini-box">
-<span>🌙</span>
-night
-</div>
-
-<div class="mini-box">
-<span>📌</span>
-Mondays
-</div>
-
-</div>
-
 </details>
 
 <details open class="red">
-
-<summary>
-7. COMMON MISTAKES
-</summary>
+<summary>7. COMMON MISTAKES</summary>
 
 <ul>
-
-<li>
-❌ He go to school.
-→ ✅ He goes to school.
-</li>
-
-<li>
-❌ She don’t like coffee.
-→ ✅ She doesn’t like coffee.
-</li>
-
-<li>
-❌ Do they goes?
-→ ✅ Do they go?
-</li>
-
+<li>❌ He go to school. → ✅ He goes to school.</li>
+<li>❌ She don’t like coffee. → ✅ She doesn’t like coffee.</li>
+<li>❌ Do they goes? → ✅ Do they go?</li>
 </ul>
-
 </details>
 
 </section>
 
 <section id="handouts">
-
-<h2>Handouts</h2>
-
-<div class="file-box">
-<strong>📄 Grammar Worksheet</strong>
-<a class="file-btn" href="#">Download</a>
-</div>
-
-<div class="file-box">
-<strong>📄 Vocabulary List</strong>
-<a class="file-btn" href="#">Download</a>
-</div>
-
+  <h2>Handouts</h2>
+  <div class="file-box">
+    <strong>📄 Grammar Worksheet</strong>
+    <a class="file-btn" href="#">Download</a>
+  </div>
 </section>
 
 <section id="videos">
-
-<h2>Videos</h2>
-
-<div class="file-box">
-<strong>▶️ Present Simple</strong>
-<a class="file-btn" href="#" style="background:#7b4ce0;">Watch</a>
-</div>
-
+  <h2>Videos</h2>
+  <div class="file-box">
+    <strong>▶️ Present Simple</strong>
+    <a class="file-btn" href="#" style="background:#7b4ce0;">Watch</a>
+  </div>
 </section>
 
 <section id="resources">
-
-<h2>Resources</h2>
-
-<div class="file-box">
-<strong>🎨 Infographics</strong>
-<a class="file-btn" href="#">Open</a>
-</div>
-
+  <h2>Resources</h2>
+  <div class="file-box">
+    <strong>🎨 Infographics</strong>
+    <a class="file-btn" href="#">Open</a>
+  </div>
 </section>
 
 <section id="contact">
-
-<h2>Contact</h2>
-
-<p>
-Email: your-email@example.com
-</p>
-
+  <h2>Contact</h2>
+  <p>Email: your-email@example.com</p>
 </section>
 
 <footer>
-
-<p>
-© 2026 Mr. Metwally | English Teacher Website
-</p>
-
+  <p>© 2026 Mr. Metwally | English Teacher Website</p>
 </footer>
 
 <script>
 
 function toggleLesson(id){
+  const lesson = document.getElementById(id);
 
-  let lesson = document.getElementById(id);
-
-  if(lesson.classList.contains("lesson-show")){
-
-    lesson.classList.remove("lesson-show");
-    lesson.classList.add("lesson-hidden");
-
-  }else{
-
-    lesson.classList.remove("lesson-hidden");
-    lesson.classList.add("lesson-show");
-
+  if(lesson.style.display === "block"){
+    lesson.style.display = "none";
+  } else {
+    lesson.style.display = "block";
   }
-
 }
 
 </script>
 
 </body>
-
 </html>
